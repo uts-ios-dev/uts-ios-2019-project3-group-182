@@ -14,7 +14,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    ////
+    
+    @IBAction func happiestButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func gourPressed(_ sender: Any) {
+    }
+    
+    @IBAction func threePressed(_ sender: Any) {
+    }
+    
+    @IBAction func twoPressed(_ sender: Any) {
+    }
+    
+    @IBAction func onePressed(_ sender: Any) {
+    }
 }
 
