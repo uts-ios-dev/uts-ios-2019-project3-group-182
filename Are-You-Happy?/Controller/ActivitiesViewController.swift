@@ -12,6 +12,7 @@ class ActivitiesViewController: UIViewController {
     
     // Variables
     let randomSource: GKRandomSource = GKARC4RandomSource()
+    var buttonArray: [UIButton] = [UIButton]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,8 @@ class ActivitiesViewController: UIViewController {
         for i in 0..<activites {
             let frame1 = CGRect(x: 20 + (i * 70), y: 20, width: 50, height: 50 )
             let button = UIButton(frame: frame1)
-            button.backgroundColor = UIColor.orange
+            button.backgroundColor = UIColor.gray
+            buttonArray.append(button)
             button.tag = generateUniqueTag()
             button.addTarget(self, action: #selector(self.activityPressed(_:)), for: UIControl.Event.touchUpInside)
             // TODO: Need to wrap activy buttons in storyboard, maybe use a collection instead of ScrollView?
@@ -32,8 +34,26 @@ class ActivitiesViewController: UIViewController {
     @objc func activityPressed( _ button : UIButton)
     {
         // TODO: Determine button activity type, add to a selectedActivies array
-        nextButton.backgroundColor = UIColor.green
-        nextButton.isEnabled = true
+        if(button.backgroundColor == UIColor.gray) {
+            button.backgroundColor = UIColor.brown
+            nextButton.backgroundColor = UIColor.green
+            nextButton.isEnabled = true
+        } else {
+            button.backgroundColor = UIColor.gray
+            var isActive = false
+            for i in 0..<buttonArray.count {
+                if(buttonArray[i].backgroundColor != UIColor.gray) {
+                    isActive = true
+                    break;
+                }
+            }
+            if(!isActive) {
+                nextButton.backgroundColor = UIColor.gray
+                nextButton.isEnabled = false
+            }
+            
+
+        }
     }
     
     // Generate and return a unique tag
