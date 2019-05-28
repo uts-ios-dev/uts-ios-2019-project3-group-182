@@ -34,26 +34,35 @@ class ActivitiesViewController: UIViewController {
     @objc func activityPressed( _ button : UIButton)
     {
         // TODO: Determine button activity type, add to a selectedActivies array
+        changeColor(button)
+        addData()
+    }
+    // change and activate buttons
+    func changeColor(_ button: UIButton) {
         if(button.backgroundColor == UIColor.gray) {
             button.backgroundColor = UIColor.brown
             nextButton.backgroundColor = UIColor.green
             nextButton.isEnabled = true
         } else {
             button.backgroundColor = UIColor.gray
-            var isActive = false
-            for i in 0..<buttonArray.count {
-                if(buttonArray[i].backgroundColor != UIColor.gray) {
-                    isActive = true
-                    break;
-                }
-            }
-            if(!isActive) {
+            if(!checkAnyActive()) {
                 nextButton.backgroundColor = UIColor.gray
                 nextButton.isEnabled = false
             }
-            
-
         }
+    }
+    // check if any button is active
+    func checkAnyActive() -> Bool{
+        for i in 0..<buttonArray.count {
+            if(buttonArray[i].backgroundColor != UIColor.gray) {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func addData() {
+        // stuff to add data goes in here
     }
     
     // Generate and return a unique tag
