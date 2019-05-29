@@ -13,6 +13,8 @@ class ActivitiesViewController: UIViewController {
     // Variables
     let randomSource: GKRandomSource = GKARC4RandomSource()
     var buttonArray: [UIButton] = [UIButton]()
+    let activities: [Activity] = []
+    let activityNames: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +79,14 @@ class ActivitiesViewController: UIViewController {
     }
     
     func addDataToStore() {
-        // TODO: Create DailyEntry object
-        // TODO: Add DailyEntry to store
+        // TODO: store data
+    }
+    
+    func getCurrentDate() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        return result
     }
 }

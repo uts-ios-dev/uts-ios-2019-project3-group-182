@@ -21,39 +21,39 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-s4-xb4" userLabel="Buttons View">
                                 <rect key="frame" x="81.902953586493368" y="433.55414908578609" width="250" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecM-JG-p5V">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                        <state key="normal" title=":("/>
-                                        <connections>
-                                            <action selector="twoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Bh-jT-FRc"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ats-ax-VcE">
-                                        <rect key="frame" x="55" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="D:"/>
                                         <connections>
                                             <action selector="onePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hET-yY-0x2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-hY-8ui">
-                                        <rect key="frame" x="110" y="0.0" width="30" height="30"/>
-                                        <state key="normal" title=":D"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecM-JG-p5V">
+                                        <rect key="frame" x="55" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title=":("/>
                                         <connections>
-                                            <action selector="happiestButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9IW-tI-o9j"/>
+                                            <action selector="twoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Bh-jT-FRc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3d-y5-xoZ">
-                                        <rect key="frame" x="165" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="110" y="0.0" width="30" height="30"/>
                                         <state key="normal" title=":|"/>
                                         <connections>
                                             <action selector="threePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwD-qu-eNI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xm-RN-Exn">
-                                        <rect key="frame" x="220" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="165" y="0.0" width="30" height="30"/>
                                         <state key="normal" title=":)"/>
                                         <connections>
                                             <action selector="gourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tz2-tL-TSd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-hY-8ui">
+                                        <rect key="frame" x="220" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title=":D"/>
+                                        <connections>
+                                            <action selector="happiestButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9IW-tI-o9j"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -96,11 +96,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1p-Fe-nTb">
-                                <rect key="frame" x="20" y="38" width="42" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="BACK"/>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLq-qj-h1O">
                                 <rect key="frame" x="36" y="145" width="343" height="321"/>
                                 <subviews>
@@ -110,8 +105,8 @@
                                     </scrollView>
                                 </subviews>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgJ-Eo-5cV">
-                                <rect key="frame" x="181.5" y="453" width="51" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgJ-Eo-5cV">
+                                <rect key="frame" x="181.5" y="453" width="53" height="40"/>
                                 <color key="backgroundColor" red="0.69015704314720816" green="0.69015704314720816" blue="0.69015704314720816" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="Next">
@@ -130,11 +125,9 @@
                             <constraint firstItem="WEN-qQ-8KC" firstAttribute="centerX" secondItem="sR3-0Y-w8u" secondAttribute="centerX" id="9g2-1A-Tdo"/>
                             <constraint firstItem="sR3-0Y-w8u" firstAttribute="centerY" secondItem="lLq-qj-h1O" secondAttribute="bottom" id="Drd-2M-Tq6"/>
                             <constraint firstItem="mgJ-Eo-5cV" firstAttribute="top" secondItem="lLq-qj-h1O" secondAttribute="bottom" id="EfR-o5-VYz"/>
-                            <constraint firstItem="sR3-0Y-w8u" firstAttribute="top" secondItem="z1p-Fe-nTb" secondAttribute="top" id="cza-Gb-Ape"/>
                             <constraint firstItem="lLq-qj-h1O" firstAttribute="leading" secondItem="sR3-0Y-w8u" secondAttribute="leading" constant="36" id="dB8-Zi-zNl"/>
                             <constraint firstItem="lLq-qj-h1O" firstAttribute="top" secondItem="WEN-qQ-8KC" secondAttribute="bottom" constant="10" id="gqf-ft-ayL"/>
                             <constraint firstItem="WEN-qQ-8KC" firstAttribute="top" secondItem="sR3-0Y-w8u" secondAttribute="top" constant="36" id="lVu-1a-Fnh"/>
-                            <constraint firstItem="z1p-Fe-nTb" firstAttribute="leading" secondItem="sR3-0Y-w8u" secondAttribute="leading" constant="20" id="vwV-AK-sFc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sR3-0Y-w8u"/>
                     </view>
