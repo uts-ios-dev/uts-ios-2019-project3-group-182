@@ -44,8 +44,15 @@ struct Storage: Codable {
         throw DataError.dataNotFound
     }
     
-    func saveData(scores: [DailyEntry]) throws {
-        let data = try JSONEncoder().encode(scores)
+    func saveDailyEntry(_ dailyEntry: [DailyEntry]) throws {
+        let data = try JSONEncoder().encode(dailyEntry)
         try write(data, to: dailyEntriesArchiveURL)
+    }
+    
+    func saveDailyEntry(_ dailyEntry: DailyEntry) throws {
+        //let data = try JSONEncoder().encode(dailyEntry)
+        var allData = try loadDailyEntries()
+        allData.append(dailyEntry)
+        try saveDailyEntry(allData)
     }
 }
