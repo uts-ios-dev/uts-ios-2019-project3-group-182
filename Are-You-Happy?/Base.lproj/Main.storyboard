@@ -161,72 +161,76 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrA-mG-i4t">
-                                <rect key="frame" x="20" y="121" width="374" height="208"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJA-UH-f7y">
+                                <rect key="frame" x="44" y="710" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrA-mG-i4t">
+                                <rect key="frame" x="10" y="220" width="394.00000000000034" height="218"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Weekly Mood Average:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNl-37-mqn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weekly Mood Average:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNl-37-mqn">
                                         <rect key="frame" x="16" y="34" width="175" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="data1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DO6-5M-WbM" userLabel="data1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="data1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DO6-5M-WbM" userLabel="data1">
                                         <rect key="frame" x="259" y="34" width="49" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Monthly Mood Average:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr2-eR-J74">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Monthly Mood Average:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr2-eR-J74">
                                         <rect key="frame" x="16" y="90" width="182" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="data2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AO1-lb-Ied">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="data2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AO1-lb-Ied">
                                         <rect key="frame" x="259" y="89" width="49" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Yearly Mood Average:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfd-Wn-Oke">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Yearly Mood Average:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfd-Wn-Oke">
                                         <rect key="frame" x="16" y="138" width="166" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="data3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrD-xE-gRH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="data3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrD-xE-gRH">
                                         <rect key="frame" x="259" y="138" width="45" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="cfd-Wn-Oke" firstAttribute="top" secondItem="Lr2-eR-J74" secondAttribute="bottom" constant="10" id="6zK-Lg-a3U"/>
+                                    <constraint firstItem="cfd-Wn-Oke" firstAttribute="top" secondItem="Lr2-eR-J74" secondAttribute="bottom" constant="20" id="6zK-Lg-a3U"/>
                                     <constraint firstItem="WNl-37-mqn" firstAttribute="top" secondItem="qrA-mG-i4t" secondAttribute="top" constant="10" id="A0a-YD-Jp1"/>
-                                    <constraint firstItem="Lr2-eR-J74" firstAttribute="top" secondItem="WNl-37-mqn" secondAttribute="bottom" constant="10" id="Hbl-kb-qW6"/>
+                                    <constraint firstItem="Lr2-eR-J74" firstAttribute="top" secondItem="WNl-37-mqn" secondAttribute="bottom" constant="20" id="Hbl-kb-qW6"/>
                                     <constraint firstItem="lrD-xE-gRH" firstAttribute="leading" secondItem="cfd-Wn-Oke" secondAttribute="trailing" constant="10" id="LSk-nf-I2h"/>
+                                    <constraint firstItem="WNl-37-mqn" firstAttribute="leading" secondItem="qrA-mG-i4t" secondAttribute="leading" constant="50" id="OWV-8O-GgW"/>
                                     <constraint firstItem="DO6-5M-WbM" firstAttribute="leading" secondItem="WNl-37-mqn" secondAttribute="trailing" constant="10" id="Swt-Jv-3yI"/>
                                     <constraint firstItem="AO1-lb-Ied" firstAttribute="centerY" secondItem="Lr2-eR-J74" secondAttribute="centerY" id="W8w-bQ-uHH"/>
                                     <constraint firstItem="lrD-xE-gRH" firstAttribute="centerY" secondItem="cfd-Wn-Oke" secondAttribute="centerY" id="cJj-pP-R0a"/>
                                     <constraint firstItem="AO1-lb-Ied" firstAttribute="leading" secondItem="Lr2-eR-J74" secondAttribute="trailing" constant="10" id="pNt-NS-Vjf"/>
+                                    <constraint firstItem="Lr2-eR-J74" firstAttribute="leading" secondItem="qrA-mG-i4t" secondAttribute="leading" constant="50" id="rgx-Nh-9GX"/>
                                     <constraint firstItem="DO6-5M-WbM" firstAttribute="centerY" secondItem="WNl-37-mqn" secondAttribute="centerY" id="w2j-mc-CAy"/>
+                                    <constraint firstItem="cfd-Wn-Oke" firstAttribute="leading" secondItem="qrA-mG-i4t" secondAttribute="leading" constant="50" id="zsG-Rx-07Q"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJA-UH-f7y">
-                                <rect key="frame" x="44" y="710" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OpT-5S-ivc" firstAttribute="trailing" secondItem="qrA-mG-i4t" secondAttribute="trailing" constant="20" id="3j6-de-gNH"/>
-                            <constraint firstItem="qrA-mG-i4t" firstAttribute="leading" secondItem="OpT-5S-ivc" secondAttribute="leading" constant="20" id="Lhb-tg-ckC"/>
-                            <constraint firstItem="qrA-mG-i4t" firstAttribute="top" secondItem="Lp6-7p-Lvx" secondAttribute="bottom" constant="50" id="lJw-Kz-dRv"/>
-                            <constraint firstItem="Lp6-7p-Lvx" firstAttribute="centerX" secondItem="OpT-5S-ivc" secondAttribute="centerX" id="qPE-cj-tJk"/>
-                            <constraint firstItem="Lp6-7p-Lvx" firstAttribute="top" secondItem="OpT-5S-ivc" secondAttribute="top" id="rOu-OL-RAF"/>
+                            <constraint firstItem="qrA-mG-i4t" firstAttribute="top" secondItem="OpT-5S-ivc" secondAttribute="top" constant="200" id="FEW-71-Vbc"/>
+                            <constraint firstItem="qrA-mG-i4t" firstAttribute="centerX" secondItem="OpT-5S-ivc" secondAttribute="centerX" id="cqp-uL-Abs"/>
+                            <constraint firstItem="Lp6-7p-Lvx" firstAttribute="top" secondItem="OpT-5S-ivc" secondAttribute="top" constant="50" id="rOu-OL-RAF"/>
+                            <constraint firstItem="Lp6-7p-Lvx" firstAttribute="centerX" secondItem="OpT-5S-ivc" secondAttribute="centerX" id="yFB-DX-c3l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OpT-5S-ivc"/>
                     </view>
