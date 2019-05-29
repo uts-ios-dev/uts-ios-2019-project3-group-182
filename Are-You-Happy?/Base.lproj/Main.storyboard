@@ -118,6 +118,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="nextButtonPressed:" destination="RvV-nM-Vjo" eventType="touchUpInside" id="hoS-3N-uWc"/>
                                     <segue destination="1ss-rb-z3H" kind="show" id="cXB-9W-hhH"/>
                                 </connections>
                             </button>

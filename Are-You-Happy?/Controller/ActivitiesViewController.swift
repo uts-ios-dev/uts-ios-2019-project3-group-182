@@ -30,14 +30,17 @@ class ActivitiesViewController: UIViewController {
         }
     }
     
-    // Activity pressed action for dynamic activities
-    @objc func activityPressed( _ button : UIButton)
-    {
-        // TODO: Determine button activity type, add to a selectedActivies array
-        changeColor(button)
-        addData()
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        addDataToStore()
     }
-    // change and activate buttons
+    
+    // Activity pressed action for dynamic activities
+    @objc func activityPressed( _ button : UIButton) {
+        changeColor(button)
+    }
+    
+    // Change and activate buttons
     func changeColor(_ button: UIButton) {
         if(button.backgroundColor == UIColor.gray) {
             button.backgroundColor = UIColor.brown
@@ -51,7 +54,8 @@ class ActivitiesViewController: UIViewController {
             }
         }
     }
-    // check if any button is active
+    
+    // Check if any button is active
     func checkAnyActive() -> Bool{
         for i in 0..<buttonArray.count {
             if(buttonArray[i].backgroundColor != UIColor.gray) {
@@ -59,10 +63,6 @@ class ActivitiesViewController: UIViewController {
             }
         }
         return false
-    }
-    
-    func addData() {
-        // stuff to add data goes in here
     }
     
     // Generate and return a unique tag
@@ -76,5 +76,8 @@ class ActivitiesViewController: UIViewController {
         }
     }
     
-    // TODO: Override nextButton press, pass selected activites and rating to next screen
+    func addDataToStore() {
+        // TODO: Create DailyEntry object
+        // TODO: Add DailyEntry to store
+    }
 }

@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Are-You-Happy?
-//
-//  Created by Alson Yupeng Zhang on 22/5/19.
-//  Copyright © 2019 Group-182. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -18,41 +10,29 @@ class ViewController: UIViewController {
     }
     
     // TODO: Rename button actions
-    
     @IBAction func happiestButtonPressed(_ sender: Any) {
-        self.rating = 1
-        goToActivitiesView()
+        setRatingAndGoToActivities(1)
     }
     
     @IBAction func gourPressed(_ sender: Any) {
-        self.rating = 2
-        goToActivitiesView()
+        setRatingAndGoToActivities(2)
     }
     
     @IBAction func threePressed(_ sender: Any) {
-        self.rating = 3
-        goToActivitiesView()
+        setRatingAndGoToActivities(3)
     }
     
     @IBAction func twoPressed(_ sender: Any) {
-        self.rating = 4
-        goToActivitiesView()
+        setRatingAndGoToActivities(4)
     }
     
     @IBAction func onePressed(_ sender: Any) {
-        self.rating = 5
-        goToActivitiesView()
+        setRatingAndGoToActivities(5)
     }
     
-    func goToActivitiesView() {
+    func setRatingAndGoToActivities(_ rating: Int) {
+        self.rating = rating
         performSegue(withIdentifier: "ActivitesViewSegue", sender: nil)
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "ActivitesViewSegue" {
-//            let activitiesViewController = segue.destination as! ActivitiesViewController
-//            activitiesViewController.rating = self.rating
-//        }
-//    }
 }
 
