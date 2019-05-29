@@ -37,7 +37,6 @@ class ActivitiesViewController: UIViewController {
     
     // Activity pressed action for dynamic activities
     @objc func activityPressed( _ button : UIButton) {
-        // TODO: Determine button activity type, add to a selectedActivies array
         changeColor(button)
     }
     
@@ -55,6 +54,7 @@ class ActivitiesViewController: UIViewController {
             }
         }
     }
+    
     // Check if any button is active
     func checkAnyActive() -> Bool{
         for i in 0..<buttonArray.count {
@@ -77,6 +77,7 @@ class ActivitiesViewController: UIViewController {
     }
     
     func addDataToStore() {
-        // stuff to add data goes in here
+        // TODO: Create DailyEntry object
+        // TODO: Add DailyEntry to store
     }
 }
