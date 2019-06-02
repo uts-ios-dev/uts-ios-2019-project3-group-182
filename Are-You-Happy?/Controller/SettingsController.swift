@@ -22,6 +22,7 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         super.viewDidLoad()
         // TODO: setup activities
         // TODO: send data to json
+        // imageOptions = [];
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
