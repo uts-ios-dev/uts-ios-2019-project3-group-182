@@ -10,6 +10,7 @@
 		16111A2F2295065A00D91767 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16111A2E2295065A00D91767 /* ActivitiesViewController.swift */; };
 		164573A5229E25050085D46B /* DailyEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164573A4229E25050085D46B /* DailyEntry.swift */; };
 		38704FB7229E209B00B22136 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38704FB6229E209B00B22136 /* StatsViewController.swift */; };
+		6AD531E022A3ACFB001BEB95 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD531DF22A3ACFB001BEB95 /* SettingsController.swift */; };
 		6B3D40A5229E29BA001ACFF7 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D40A4229E29BA001ACFF7 /* Storage.swift */; };
 		6B8840AD2295713C00E2FCC6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8840AC2295713C00E2FCC6 /* Activity.swift */; };
 		6C5DCBA3229503BD00A43826 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5DCBA2229503BD00A43826 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 		16111A2E2295065A00D91767 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		164573A4229E25050085D46B /* DailyEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEntry.swift; sourceTree = "<group>"; };
 		38704FB6229E209B00B22136 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		6AD531DF22A3ACFB001BEB95 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		6B3D40A4229E29BA001ACFF7 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		6B8840AC2295713C00E2FCC6 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		6C5DCB9F229503BD00A43826 /* Are-You-Happy?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Are-You-Happy?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,7 @@
 				16111A2E2295065A00D91767 /* ActivitiesViewController.swift */,
 				6C5DCBA4229503BD00A43826 /* ViewController.swift */,
 				38704FB6229E209B00B22136 /* StatsViewController.swift */,
+				6AD531DF22A3ACFB001BEB95 /* SettingsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD531E022A3ACFB001BEB95 /* SettingsController.swift in Sources */,
 				164573A5229E25050085D46B /* DailyEntry.swift in Sources */,
 				6B3D40A5229E29BA001ACFF7 /* Storage.swift in Sources */,
 				6C5DCBA5229503BD00A43826 /* ViewController.swift in Sources */,
