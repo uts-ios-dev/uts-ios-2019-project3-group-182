@@ -10,12 +10,13 @@ import UIKit
 
 class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var tempColor: UILabel!
     @IBOutlet weak var colourPicker: UIPickerView!
     @IBOutlet weak var imagePicker: UIPickerView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameField: UITextField!
     
     var colorOptions = ["red", "orange", "yellow", "green", "cyan", "blue", "brown", "magenta", "pink"]
+    var uicolorOptions = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.green, UIColor.cyan, UIColor.blue, UIColor.brown, UIColor.magenta, UIColor.purple]
     var imageOptions = ["airplane", "bday", "beer", "bike", "bus", "car", "cloudy day", "coffee", "cupcake", "dinner", "food and wine", "gaming", "goals", "groceries", "hail", "hamburger", "headache", "heavy rain", "meditate", "motorbike", "movies", "party cloudy day", "pizza", "public transport", "raining", "running", "sandwich", "sleeping", "sneeze", "snowing", "storm", "sunny", "taxi", "tea", "traffic jam", "train", "truck", "vr", "walk", "windy", "wine", "workout"]
     
     override func viewDidLoad() {
@@ -24,7 +25,13 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         // TODO: send data to json
         // imageOptions = [];
         imageView.image = UIImage(named: "airplane")
+        imageView.tintColor = UIColor.red
 
+    }
+    @IBAction func addActivity(_ sender: Any) {
+        // grab data from namefield
+        // create new activity object first?
+        //save to json
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -53,6 +60,7 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             imageView.image = UIImage(named: imageOptions[row])
         } else {
             // change colour of image? or something
+            imageView.tintColor = uicolorOptions[row]
         }
     }
     
