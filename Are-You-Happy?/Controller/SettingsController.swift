@@ -15,14 +15,16 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var imagePicker: UIPickerView!
     @IBOutlet weak var imageView: UIImageView!
     
-    var colorOptions = ["red", "blue", "green", "brown", "yellow", "magenta", "pink", "cyan", "orange"]
-    var imageOptions = [""]
+    var colorOptions = ["red", "orange", "yellow", "green", "cyan", "blue", "brown", "magenta", "pink"]
+    var imageOptions = ["airplane", "bday", "beer", "bike", "bus", "car", "cloudy day", "coffee", "cupcake", "dinner", "food and wine", "gaming", "goals", "groceries", "hail", "hamburger", "headache", "heavy rain", "meditate", "motorbike", "movies", "party cloudy day", "pizza", "public transport", "raining", "running", "sandwich", "sleeping", "sneeze", "snowing", "storm", "sunny", "taxi", "tea", "traffic jam", "train", "truck", "vr", "walk", "windy", "wine", "workout"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // TODO: setup activities
         // TODO: send data to json
         // imageOptions = [];
+        imageView.image = UIImage(named: "airplane")
+
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -48,6 +50,7 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(pickerView.tag == 1) {
             //change image view
+            imageView.image = UIImage(named: imageOptions[row])
         } else {
             // change colour of image? or something
         }
