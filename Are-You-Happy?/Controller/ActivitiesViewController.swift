@@ -15,6 +15,7 @@ class ActivitiesViewController: UIViewController {
     var buttonArray: [UIButton] = [UIButton]()
     var activities: [Activity] = []
     let activityNames: [String] = []
+    let defaultFalseColor: UIColor = UIColor.gray
     
     override func viewDidLoad() {
         super.viewDidLoad()

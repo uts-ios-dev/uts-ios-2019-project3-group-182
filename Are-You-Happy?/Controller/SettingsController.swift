@@ -30,6 +30,7 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         imageView.tintColor = UIColor.red
 
     }
+    //
     @IBAction func addActivity(_ sender: Any) {
         // grab data from namefield
         // create new activity object first?
