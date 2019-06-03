@@ -7,7 +7,7 @@ class ActivitiesViewController: UIViewController {
     @IBOutlet weak var activitiesScrollView: UIScrollView!
     @IBOutlet weak var nextButton: UIButton!
     
-    // Load from HomeViewController
+    // Load from ViewController
     var rating: Int = 0
     
     // Variables
@@ -103,6 +103,22 @@ class ActivitiesViewController: UIViewController {
     
     func addDataToStore() {
         // TODO: store data
+        // storage : saveDailyEntry(dailyentry object)
+        //date:string, rating: Int, activityNames: [String]
+        
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "dd-MM-yyyy"
+        let formattedDate = format.string(from: <#T##Date#>)
+        
+        //let calendar = Calendar.current
+        //calendar.component(.day, from: date)
+        
+        //let tempDailyEntry = DailyEntry(formattedDate, rating, activityNames[findButtonID(UIButton)])
+        let storage = Storage()
+        do {
+            try //storage.saveDailyEntry(tempDailyEntry)
+        } catch {}
     }
     
     func getCurrentDate() -> String {
