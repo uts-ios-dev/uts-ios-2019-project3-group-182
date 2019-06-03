@@ -64,8 +64,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bi9-Pl-Kug">
-                                <rect key="frame" x="20" y="64" width="57" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bi9-Pl-Kug">
+                                <rect key="frame" x="20" y="64" width="57" height="20"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
                                     <segue destination="Vou-QB-NQU" kind="show" id="etp-xC-cub"/>
@@ -75,6 +75,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bi9-Pl-Kug" firstAttribute="top" secondItem="vkI-YV-5N3" secondAttribute="top" constant="20" id="0on-bF-sVN"/>
+                            <constraint firstItem="B5Z-50-EOj" firstAttribute="leading" secondItem="Bi9-Pl-Kug" secondAttribute="trailing" constant="58.5" id="AmR-jn-I9c"/>
                             <constraint firstItem="Bi9-Pl-Kug" firstAttribute="leading" secondItem="vkI-YV-5N3" secondAttribute="leading" constant="20" id="Df5-nI-OR5"/>
                             <constraint firstItem="B5Z-50-EOj" firstAttribute="centerX" secondItem="vkI-YV-5N3" secondAttribute="centerX" id="ED1-8b-jWb"/>
                             <constraint firstItem="5VT-s4-xb4" firstAttribute="top" secondItem="B5Z-50-EOj" secondAttribute="bottom" constant="338" id="MB6-DV-C7l"/>
@@ -100,7 +101,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What did you do?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEN-qQ-8KC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What did you do?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEN-qQ-8KC">
                                 <rect key="frame" x="140" y="44" width="134" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -116,7 +117,7 @@
                                 </subviews>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgJ-Eo-5cV">
-                                <rect key="frame" x="181.5" y="453" width="53" height="40"/>
+                                <rect key="frame" x="181" y="474" width="53" height="40"/>
                                 <color key="backgroundColor" red="0.69015704314720816" green="0.69015704314720816" blue="0.69015704314720816" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="Next">
@@ -137,7 +138,7 @@
                             <constraint firstItem="mgJ-Eo-5cV" firstAttribute="top" secondItem="lLq-qj-h1O" secondAttribute="bottom" id="EfR-o5-VYz"/>
                             <constraint firstItem="lLq-qj-h1O" firstAttribute="leading" secondItem="tLH-ix-jix" secondAttribute="leading" constant="36" id="dB8-Zi-zNl"/>
                             <constraint firstItem="lLq-qj-h1O" firstAttribute="top" secondItem="WEN-qQ-8KC" secondAttribute="bottom" constant="10" id="gqf-ft-ayL"/>
-                            <constraint firstItem="WEN-qQ-8KC" firstAttribute="top" secondItem="tLH-ix-jix" secondAttribute="top" constant="36" id="lVu-1a-Fnh"/>
+                            <constraint firstItem="WEN-qQ-8KC" firstAttribute="top" secondItem="tLH-ix-jix" secondAttribute="top" id="lVu-1a-Fnh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tLH-ix-jix"/>
                     </view>
