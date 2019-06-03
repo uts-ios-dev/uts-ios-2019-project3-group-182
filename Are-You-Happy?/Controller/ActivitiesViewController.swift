@@ -13,17 +13,26 @@ class ActivitiesViewController: UIViewController {
     // Variables
     let randomSource: GKRandomSource = GKARC4RandomSource()
     var buttonArray: [UIButton] = [UIButton]()
-    let activities: [Activity] = []
+    var activities: [Activity] = []
     let activityNames: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let activites = 4 // TODO: Load activites list from storage.
+        //let activites = 4 // TODO: Load activites list from storage.
         // Render activites based on user activity list
-        for i in 0..<activites {
+        let storage = Storage()
+        do {
+            activities = try storage.loadActivities()
+        } catch {
+            
+        }
+        for i in 0..<activities.count {
             let frame1 = CGRect(x: 20 + (i * 70), y: 20, width: 50, height: 50 )
+            let imageName = activities[i].getImage()
+            let image = UIImage(named: imageName)
             let button = UIButton(frame: frame1)
-            button.backgroundColor = UIColor.gray
+            button.setImage(image, for: .normal)
+            //button.backgroundColor = UIColor.gray
             buttonArray.append(button)
             button.tag = generateUniqueTag()
             button.addTarget(self, action: #selector(self.activityPressed(_:)), for: UIControl.Event.touchUpInside)
