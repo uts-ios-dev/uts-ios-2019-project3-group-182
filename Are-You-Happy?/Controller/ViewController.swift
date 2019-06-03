@@ -34,5 +34,13 @@ class ViewController: UIViewController {
         self.rating = rating
         performSegue(withIdentifier: "ActivitesViewSegue", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ActivitesViewSegue"){
+            let activitiesVC = segue.destination as! ActivitiesViewController
+            activitiesVC.rating = rating
+        }
+    }
+    
 }
 

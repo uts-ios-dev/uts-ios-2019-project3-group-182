@@ -8,7 +8,7 @@ class ActivitiesViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     // Load from HomeViewController
-    var rating: Int?
+    var rating: Int = 0
     
     // Variables
     let randomSource: GKRandomSource = GKARC4RandomSource()
