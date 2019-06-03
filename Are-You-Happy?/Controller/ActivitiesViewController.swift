@@ -33,6 +33,7 @@ class ActivitiesViewController: UIViewController {
             let image = UIImage(named: imageName)
             let button = UIButton(frame: frame1)
             button.setImage(image, for: .normal)
+            button.tintColor = defaultFalseColor
             //button.backgroundColor = UIColor.gray
             buttonArray.append(button)
             button.tag = generateUniqueTag()
@@ -53,23 +54,31 @@ class ActivitiesViewController: UIViewController {
     
     // Change and activate buttons
     func changeColor(_ button: UIButton) {
-        if(button.backgroundColor == UIColor.gray) {
-            button.backgroundColor = UIColor.brown
+        if(button.tintColor == defaultFalseColor) {
+            //button.backgroundColor = UIColor.brown
+            button.tintColor = colors.uiColorOptions[activities[findButtonID(button)].getcolor()]
             nextButton.backgroundColor = UIColor.green
             nextButton.isEnabled = true
         } else {
-            button.backgroundColor = UIColor.gray
+            button.tintColor = defaultFalseColor
             if(!checkAnyActive()) {
-                nextButton.backgroundColor = UIColor.gray
+                nextButton.backgroundColor = defaultFalseColor
                 nextButton.isEnabled = false
             }
         }
     }
-    
+    func findButtonID(_ button: UIButton) -> Int{
+        for i in 0..<buttonArray.count {
+            if(buttonArray[i] == button) {
+                return i
+            }
+        }
+        return -1
+    }
     // Check if any button is active
     func checkAnyActive() -> Bool{
         for i in 0..<buttonArray.count {
-            if(buttonArray[i].backgroundColor != UIColor.gray) {
+            if(buttonArray[i].tintColor != defaultFalseColor) {
                 return true
             }
         }
