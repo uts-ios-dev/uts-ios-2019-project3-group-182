@@ -3,6 +3,7 @@ import Foundation
 // Struct for storing data
 struct Storage: Codable {
     let dailyEntriesArchiveURL: URL
+    let activitiesArchiveURL: URL
     
     // Data error enums
     enum DataError: Error {
@@ -15,6 +16,8 @@ struct Storage: Codable {
         let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         // Set up URL
         dailyEntriesArchiveURL = directory.appendingPathComponent("daily_entries")
+            .appendingPathExtension("json")
+        activitiesArchiveURL = directory.appendingPathComponent("activities")
             .appendingPathExtension("json")
     }
     
@@ -54,5 +57,25 @@ struct Storage: Codable {
         var allData = try loadDailyEntries()
         allData.append(dailyEntry)
         try saveDailyEntry(allData)
+    }
+    
+    func loadActivities() throws -> [Activity] {
+        let data = try read(from: activitiesArchiveURL)
+        if let activity = try? JSONDecoder().decode([Activity].self, from: data) {
+            return activity
+        }
+        throw DataError.dataNotFound
+    }
+    
+    func saveActivities(_ activity: [Activity]) throws {
+        let data = try JSONEncoder().encode(activity)
+        try write(data, to: activitiesArchiveURL)
+    }
+    
+    func saveActivities(_ activity: Activity) throws {
+        //let data = try JSONEncoder().encode(dailyEntry)
+        var allData = try loadActivities()
+        allData.append(activity)
+        try saveActivities(allData)
     }
 }

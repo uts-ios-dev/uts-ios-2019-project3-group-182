@@ -15,10 +15,10 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameField: UITextField!
     
-    var colorRow: Int
-    var imageRow: Int
-    
-    var colorOptions = ["red", "orange", "yellow", "green", "cyan", "blue", "brown", "magenta", "pink"]
+    var colorRow: Int = 0
+    var imageRow: Int = 0
+    // move these into model, or enum or something
+    var colorOptions = ["red", "orange", "yellow", "green", "cyan", "blue", "brown", "pink", "purple"]
     var uicolorOptions = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.green, UIColor.cyan, UIColor.blue, UIColor.brown, UIColor.magenta, UIColor.purple]
     var imageOptions = ["airplane", "bday", "beer", "bike", "bus", "car", "cloudy day", "coffee", "cupcake", "dinner", "food and wine", "gaming", "goals", "groceries", "hail", "hamburger", "headache", "heavy rain", "meditate", "motorbike", "movies", "party cloudy day", "pizza", "public transport", "raining", "running", "sandwich", "sleeping", "sneeze", "snowing", "storm", "sunny", "taxi", "tea", "traffic jam", "train", "truck", "vr", "walk", "windy", "wine", "workout"]
     
@@ -34,7 +34,7 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         // grab data from namefield
         // create new activity object first?
         //save to json
-        let temp = Activity(nameField.text!, true, imageOptions[imageRow], uicolorOptions[colorRow])
+        let temp = Activity(nameField.text!, true, imageOptions[imageRow], colorOptions[colorRow])
         
     }
     
