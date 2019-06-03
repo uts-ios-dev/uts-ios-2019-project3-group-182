@@ -33,13 +33,19 @@ class ActivitiesViewController: UIViewController {
             let image = UIImage(named: imageName)
             let button = UIButton(frame: frame1)
             button.setImage(image, for: .normal)
-            button.tintColor = defaultFalseColor
-            //button.backgroundColor = UIColor.gray
+            if(activities[i].active == true) {
+                button.tintColor = colors.uiColorOptions[activities[i].getcolor()]
+            } else {
+                button.tintColor = defaultFalseColor
+            }
             buttonArray.append(button)
             button.tag = generateUniqueTag()
             button.addTarget(self, action: #selector(self.activityPressed(_:)), for: UIControl.Event.touchUpInside)
             // TODO: Need to wrap activy buttons in storyboard, maybe use a collection instead of ScrollView?
             self.activitiesScrollView.addSubview(button)
+        }
+        if(checkAnyActive()) {
+            nextButton.backgroundColor = UIColor.green
         }
     }
     
@@ -55,7 +61,6 @@ class ActivitiesViewController: UIViewController {
     // Change and activate buttons
     func changeColor(_ button: UIButton) {
         if(button.tintColor == defaultFalseColor) {
-            //button.backgroundColor = UIColor.brown
             button.tintColor = colors.uiColorOptions[activities[findButtonID(button)].getcolor()]
             nextButton.backgroundColor = UIColor.green
             nextButton.isEnabled = true
