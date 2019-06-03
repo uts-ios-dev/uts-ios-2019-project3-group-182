@@ -30,13 +30,22 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         imageView.tintColor = UIColor.red
 
     }
-    @IBAction func addActivity(_ sender: Any) throws {
+    @IBAction func addActivity(_ sender: Any) {
         // grab data from namefield
         // create new activity object first?
         //save to json
         let tempActivity = Activity(nameField.text!, true, imageOptions[imageRow], colorOptions[colorRow])
         let storage = Storage()
-        try storage.saveActivities(tempActivity)
+        do {
+            try storage.saveActivities(tempActivity)
+        } catch {}
+    }
+    @IBAction func DeleteAllActivities(_ sender: Any) {
+        let emptyArray: [Activity] = []
+        let storage = Storage()
+        do {
+            try storage.saveActivities(emptyArray)
+        } catch {}
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

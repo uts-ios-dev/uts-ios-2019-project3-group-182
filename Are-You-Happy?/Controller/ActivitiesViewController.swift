@@ -41,7 +41,6 @@ class ActivitiesViewController: UIViewController {
         }
     }
     
-    
     @IBAction func nextButtonPressed(_ sender: Any) {
         addDataToStore()
     }
