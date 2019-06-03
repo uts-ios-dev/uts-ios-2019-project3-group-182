@@ -34,7 +34,7 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         // grab data from namefield
         // create new activity object first?
         //save to json
-        let tempActivity = Activity(nameField.text!, true, imageOptions[imageRow], colorOptions[colorRow])
+        let tempActivity = Activity(nameField.text!, true, imageOptions[imageRow], colorRow)
         let storage = Storage()
         do {
             try storage.saveActivities(tempActivity)
