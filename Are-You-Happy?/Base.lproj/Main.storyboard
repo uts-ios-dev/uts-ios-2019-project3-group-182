@@ -276,7 +276,7 @@
                                 </connections>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-0T-kdm">
-                                <rect key="frame" x="100" y="135" width="214" height="30"/>
+                                <rect key="frame" x="100" y="105" width="214" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -309,6 +309,16 @@
                                     <action selector="DeleteAllActivities:" destination="Vou-QB-NQU" eventType="touchUpInside" id="ykf-61-lEP"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="AX7-cG-3ms">
+                                <rect key="frame" x="160.5" y="175" width="93" height="29"/>
+                                <segments>
+                                    <segment title="True"/>
+                                    <segment title="False"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="Vou-QB-NQU" eventType="valueChanged" id="kwE-7P-GcL"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -317,6 +327,7 @@
                             <constraint firstItem="4Fz-CK-6Fx" firstAttribute="leading" secondItem="wV4-Y6-0z1" secondAttribute="trailing" constant="93.5" id="5ai-ra-hZG"/>
                             <constraint firstItem="EeL-oa-OkK" firstAttribute="top" secondItem="e55-re-QAg" secondAttribute="bottom" constant="32" id="87P-0u-j3B"/>
                             <constraint firstItem="wV4-Y6-0z1" firstAttribute="leading" secondItem="Dh2-VC-MCd" secondAttribute="leading" constant="26" id="8X2-R2-JH4"/>
+                            <constraint firstItem="BN1-T5-3hE" firstAttribute="top" secondItem="AX7-cG-3ms" secondAttribute="bottom" constant="45" id="9V0-iv-n68"/>
                             <constraint firstItem="wV4-Y6-0z1" firstAttribute="top" secondItem="Dh2-VC-MCd" secondAttribute="top" constant="3" id="GUg-0z-MB3"/>
                             <constraint firstItem="Dh2-VC-MCd" firstAttribute="trailing" secondItem="xpj-XC-4Tq" secondAttribute="trailing" id="Gfw-0B-W7l"/>
                             <constraint firstItem="e55-re-QAg" firstAttribute="centerX" secondItem="xpj-XC-4Tq" secondAttribute="centerX" id="KTV-8j-6zt"/>
@@ -329,14 +340,14 @@
                             <constraint firstItem="e55-re-QAg" firstAttribute="leading" secondItem="Dh2-VC-MCd" secondAttribute="leading" id="cn7-H5-Jzt"/>
                             <constraint firstItem="e55-re-QAg" firstAttribute="top" secondItem="xpj-XC-4Tq" secondAttribute="bottom" constant="-10" id="ezi-27-jUa"/>
                             <constraint firstItem="e55-re-QAg" firstAttribute="centerX" secondItem="xpj-XC-4Tq" secondAttribute="centerX" id="g8d-PF-Tcm"/>
-                            <constraint firstItem="BN1-T5-3hE" firstAttribute="centerX" secondItem="Dka-0T-kdm" secondAttribute="centerX" id="gbs-no-tXf"/>
+                            <constraint firstItem="AX7-cG-3ms" firstAttribute="centerX" secondItem="Dka-0T-kdm" secondAttribute="centerX" id="gbs-no-tXf"/>
                             <constraint firstItem="xpj-XC-4Tq" firstAttribute="top" secondItem="BN1-T5-3hE" secondAttribute="bottom" constant="43" id="hHt-DB-yHA"/>
                             <constraint firstItem="wV4-Y6-0z1" firstAttribute="top" secondItem="Dh2-VC-MCd" secondAttribute="top" constant="3" id="jpa-gg-Q1L"/>
                             <constraint firstItem="Dka-0T-kdm" firstAttribute="centerX" secondItem="4Fz-CK-6Fx" secondAttribute="centerX" id="oab-Lc-avz"/>
                             <constraint firstItem="Dh2-VC-MCd" firstAttribute="trailing" secondItem="Dka-0T-kdm" secondAttribute="trailing" constant="100" id="qEb-Xk-pj4"/>
-                            <constraint firstItem="BN1-T5-3hE" firstAttribute="top" secondItem="Dka-0T-kdm" secondAttribute="bottom" constant="60" id="rXt-LE-uda"/>
+                            <constraint firstItem="AX7-cG-3ms" firstAttribute="top" secondItem="Dka-0T-kdm" secondAttribute="bottom" constant="40" id="rXt-LE-uda"/>
                             <constraint firstItem="ibc-Sd-1WX" firstAttribute="centerX" secondItem="EeL-oa-OkK" secondAttribute="centerX" id="wiO-65-fEk"/>
-                            <constraint firstItem="Dka-0T-kdm" firstAttribute="top" secondItem="4Fz-CK-6Fx" secondAttribute="bottom" constant="55" id="zUJ-Sb-W08"/>
+                            <constraint firstItem="Dka-0T-kdm" firstAttribute="top" secondItem="4Fz-CK-6Fx" secondAttribute="bottom" constant="25" id="zUJ-Sb-W08"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dh2-VC-MCd"/>
                     </view>
@@ -345,6 +356,7 @@
                         <outlet property="imagePicker" destination="xpj-XC-4Tq" id="BiO-Qz-Wco"/>
                         <outlet property="imageView" destination="BN1-T5-3hE" id="xJM-kZ-Z5G"/>
                         <outlet property="nameField" destination="Dka-0T-kdm" id="Y0Y-xu-X5l"/>
+                        <outlet property="segment" destination="AX7-cG-3ms" id="LPu-Ac-Upn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSe-50-kds" userLabel="First Responder" sceneMemberID="firstResponder"/>

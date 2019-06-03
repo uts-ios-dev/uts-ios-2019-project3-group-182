@@ -14,9 +14,11 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var imagePicker: UIPickerView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var segment: UISegmentedControl!
     
     var colorRow: Int = 0
     var imageRow: Int = 0
+    var defaultActive: Bool = false
     // move these into model, or enum or something
     var colorOptions = ["red", "orange", "yellow", "green", "cyan", "blue", "brown", "pink", "purple"]
     var uicolorOptions = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.green, UIColor.cyan, UIColor.blue, UIColor.brown, UIColor.magenta, UIColor.purple]
@@ -30,12 +32,23 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         imageView.tintColor = UIColor.red
 
     }
-    //
+    
+    @IBAction func segmentChanged(_ sender: Any) {
+        switch segment.selectedSegmentIndex {
+        case 0:
+            defaultActive = true
+        case 1:
+            defaultActive = false
+        default:
+            break
+        }
+    }
+    
     @IBAction func addActivity(_ sender: Any) {
         // grab data from namefield
         // create new activity object first?
         //save to json
-        let tempActivity = Activity(nameField.text!, true, imageOptions[imageRow], colorRow)
+        let tempActivity = Activity(nameField.text!, defaultActive, imageOptions[imageRow], colorRow)
         let storage = Storage()
         do {
             try storage.saveActivities(tempActivity)
