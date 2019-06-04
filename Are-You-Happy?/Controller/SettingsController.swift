@@ -53,6 +53,12 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         do {
             try storage.saveActivities(tempActivity)
         } catch {}
+        colourPicker.selectRow(0, inComponent: 0, animated: true)
+        imagePicker.selectRow(0, inComponent: 0, animated: true)
+        nameField.text = ""
+        segment.selectedSegmentIndex = 1
+        pickerView(colourPicker, didSelectRow: 0, inComponent: 0)
+        pickerView(imagePicker, didSelectRow: 0, inComponent: 0)
     }
     @IBAction func DeleteAllActivities(_ sender: Any) {
         let emptyArray: [Activity] = []

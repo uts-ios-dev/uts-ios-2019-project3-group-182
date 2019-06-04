@@ -109,7 +109,7 @@ class ActivitiesViewController: UIViewController {
         let date = Date()
         let format = DateFormatter()
         format.dateFormat = "dd-MM-yyyy"
-        let formattedDate = format.string(from: <#T##Date#>)
+        //let formattedDate = format.string(from: )
         
         //let calendar = Calendar.current
         //calendar.component(.day, from: date)
@@ -117,7 +117,7 @@ class ActivitiesViewController: UIViewController {
         //let tempDailyEntry = DailyEntry(formattedDate, rating, activityNames[findButtonID(UIButton)])
         let storage = Storage()
         do {
-            try //storage.saveDailyEntry(tempDailyEntry)
+            //try //storage.saveDailyEntry(tempDailyEntry)
         } catch {}
     }
     

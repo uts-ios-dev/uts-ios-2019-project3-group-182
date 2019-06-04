@@ -266,7 +266,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BN1-T5-3hE">
-                                <rect key="frame" x="182" y="247" width="50" height="50"/>
+                                <rect key="frame" x="182" y="259" width="50" height="50"/>
                             </imageView>
                             <pickerView tag="1" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xpj-XC-4Tq">
                                 <rect key="frame" x="0.0" y="338" width="414" height="162"/>
@@ -276,7 +276,7 @@
                                 </connections>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-0T-kdm">
-                                <rect key="frame" x="100" y="105" width="214" height="30"/>
+                                <rect key="frame" x="100" y="120" width="214" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -302,15 +302,8 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="8wV-zL-uvi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibc-Sd-1WX">
-                                <rect key="frame" x="141" y="766" width="132" height="30"/>
-                                <state key="normal" title="Delete All Activities"/>
-                                <connections>
-                                    <action selector="DeleteAllActivities:" destination="Vou-QB-NQU" eventType="touchUpInside" id="ykf-61-lEP"/>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="AX7-cG-3ms">
-                                <rect key="frame" x="160.5" y="175" width="93" height="29"/>
+                                <rect key="frame" x="160.5" y="190" width="93" height="29"/>
                                 <segments>
                                     <segment title="True"/>
                                     <segment title="False"/>
@@ -319,6 +312,13 @@
                                     <action selector="segmentChanged:" destination="Vou-QB-NQU" eventType="valueChanged" id="kwE-7P-GcL"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibc-Sd-1WX">
+                                <rect key="frame" x="141" y="735" width="132" height="30"/>
+                                <state key="normal" title="Delete All Activities"/>
+                                <connections>
+                                    <action selector="DeleteAllActivities:" destination="Vou-QB-NQU" eventType="touchUpInside" id="ykf-61-lEP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -327,14 +327,14 @@
                             <constraint firstItem="4Fz-CK-6Fx" firstAttribute="leading" secondItem="wV4-Y6-0z1" secondAttribute="trailing" constant="93.5" id="5ai-ra-hZG"/>
                             <constraint firstItem="EeL-oa-OkK" firstAttribute="top" secondItem="e55-re-QAg" secondAttribute="bottom" constant="32" id="87P-0u-j3B"/>
                             <constraint firstItem="wV4-Y6-0z1" firstAttribute="leading" secondItem="Dh2-VC-MCd" secondAttribute="leading" constant="26" id="8X2-R2-JH4"/>
-                            <constraint firstItem="BN1-T5-3hE" firstAttribute="top" secondItem="AX7-cG-3ms" secondAttribute="bottom" constant="45" id="9V0-iv-n68"/>
+                            <constraint firstItem="BN1-T5-3hE" firstAttribute="top" secondItem="AX7-cG-3ms" secondAttribute="bottom" constant="42" id="9V0-iv-n68"/>
                             <constraint firstItem="wV4-Y6-0z1" firstAttribute="top" secondItem="Dh2-VC-MCd" secondAttribute="top" constant="3" id="GUg-0z-MB3"/>
                             <constraint firstItem="Dh2-VC-MCd" firstAttribute="trailing" secondItem="xpj-XC-4Tq" secondAttribute="trailing" id="Gfw-0B-W7l"/>
                             <constraint firstItem="e55-re-QAg" firstAttribute="centerX" secondItem="xpj-XC-4Tq" secondAttribute="centerX" id="KTV-8j-6zt"/>
                             <constraint firstItem="Dh2-VC-MCd" firstAttribute="trailing" secondItem="e55-re-QAg" secondAttribute="trailing" id="PlQ-dD-ng5"/>
                             <constraint firstItem="4Fz-CK-6Fx" firstAttribute="top" secondItem="Dh2-VC-MCd" secondAttribute="top" id="RTa-Ee-tkO"/>
                             <constraint firstItem="Dh2-VC-MCd" firstAttribute="trailing" secondItem="xpj-XC-4Tq" secondAttribute="trailing" id="TO2-5Y-hAl"/>
-                            <constraint firstItem="ibc-Sd-1WX" firstAttribute="top" secondItem="EeL-oa-OkK" secondAttribute="bottom" constant="46" id="UXX-K1-8W4"/>
+                            <constraint firstItem="ibc-Sd-1WX" firstAttribute="top" secondItem="EeL-oa-OkK" secondAttribute="bottom" constant="20" id="UXX-K1-8W4"/>
                             <constraint firstItem="xpj-XC-4Tq" firstAttribute="leading" secondItem="Dh2-VC-MCd" secondAttribute="leading" id="Y4M-ZP-dJq"/>
                             <constraint firstItem="Dka-0T-kdm" firstAttribute="leading" secondItem="Dh2-VC-MCd" secondAttribute="leading" constant="100" id="aCL-3x-6to"/>
                             <constraint firstItem="e55-re-QAg" firstAttribute="leading" secondItem="Dh2-VC-MCd" secondAttribute="leading" id="cn7-H5-Jzt"/>
@@ -347,7 +347,7 @@
                             <constraint firstItem="Dh2-VC-MCd" firstAttribute="trailing" secondItem="Dka-0T-kdm" secondAttribute="trailing" constant="100" id="qEb-Xk-pj4"/>
                             <constraint firstItem="AX7-cG-3ms" firstAttribute="top" secondItem="Dka-0T-kdm" secondAttribute="bottom" constant="40" id="rXt-LE-uda"/>
                             <constraint firstItem="ibc-Sd-1WX" firstAttribute="centerX" secondItem="EeL-oa-OkK" secondAttribute="centerX" id="wiO-65-fEk"/>
-                            <constraint firstItem="Dka-0T-kdm" firstAttribute="top" secondItem="4Fz-CK-6Fx" secondAttribute="bottom" constant="25" id="zUJ-Sb-W08"/>
+                            <constraint firstItem="Dka-0T-kdm" firstAttribute="top" secondItem="4Fz-CK-6Fx" secondAttribute="bottom" constant="40" id="zUJ-Sb-W08"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dh2-VC-MCd"/>
                     </view>
