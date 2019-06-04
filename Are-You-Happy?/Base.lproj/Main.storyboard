@@ -192,11 +192,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJA-UH-f7y">
-                                <rect key="frame" x="27" y="832" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrA-mG-i4t">
                                 <rect key="frame" x="20" y="98" width="374" height="217"/>
                                 <subviews>
@@ -236,6 +231,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJA-UH-f7y">
+                                        <rect key="frame" x="103" y="157" width="168" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="View Activity Correlation"/>
+                                        <connections>
+                                            <segue destination="aBT-i5-JXM" kind="show" id="eME-oM-8Pv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -397,6 +400,21 @@
             </objects>
             <point key="canvasLocation" x="155.07246376811597" y="897.99107142857133"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eh0-E1-ZVB">
+            <objects>
+                <viewController id="aBT-i5-JXM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IQR-vd-A9e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lan-jb-IPn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D2w-hi-GYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2435" y="881"/>
+        </scene>
         <!--Daily Entries View Controller-->
         <scene sceneID="uUV-oI-GOH">
             <objects>
@@ -424,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dh2-zU-v2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686.9565217391305" y="857.47767857142856"/>
+            <point key="canvasLocation" x="1759" y="1093"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
