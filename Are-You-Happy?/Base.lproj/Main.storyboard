@@ -170,19 +170,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp6-7p-Lvx">
-                                <rect key="frame" x="165.5" y="94" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Stats page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp6-7p-Lvx">
+                                <rect key="frame" x="166" y="44" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJA-UH-f7y">
-                                <rect key="frame" x="44" y="710" width="46" height="30"/>
+                                <rect key="frame" x="27" y="832" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrA-mG-i4t">
-                                <rect key="frame" x="20" y="220" width="374" height="217"/>
+                                <rect key="frame" x="20" y="98" width="374" height="217"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Mood Average:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNl-37-mqn">
                                         <rect key="frame" x="24" y="28" width="175" height="21"/>
@@ -241,27 +241,25 @@
                                     <constraint firstAttribute="trailing" secondItem="lrD-xE-gRH" secondAttribute="trailing" constant="72" id="zh8-a4-XZN"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQ0-X2-m5D">
-                                <rect key="frame" x="87" y="476" width="240" height="128"/>
-                            </scrollView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ySG-yw-TZS">
+                                <rect key="frame" x="20" y="323" width="374" height="501"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="mY5-HJ-5b1" kind="embed" id="ftc-sK-yDa"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1h2-zO-j8M" firstAttribute="trailing" secondItem="qrA-mG-i4t" secondAttribute="trailing" constant="20" id="3j6-de-gNH"/>
-                            <constraint firstItem="qrA-mG-i4t" firstAttribute="top" secondItem="1h2-zO-j8M" secondAttribute="top" constant="200" id="FEW-71-Vbc"/>
-                            <constraint firstItem="1h2-zO-j8M" firstAttribute="bottom" secondItem="fQ0-X2-m5D" secondAttribute="bottom" constant="258" id="IQQ-Nr-2EA"/>
-                            <constraint firstItem="fQ0-X2-m5D" firstAttribute="top" secondItem="qrA-mG-i4t" secondAttribute="bottom" constant="39" id="KGn-x8-I9R"/>
                             <constraint firstItem="qrA-mG-i4t" firstAttribute="leading" secondItem="1h2-zO-j8M" secondAttribute="leading" constant="20" id="XMD-CJ-3Zv"/>
                             <constraint firstItem="qrA-mG-i4t" firstAttribute="centerX" secondItem="1h2-zO-j8M" secondAttribute="centerX" id="cqp-uL-Abs"/>
-                            <constraint firstItem="fQ0-X2-m5D" firstAttribute="leading" secondItem="1h2-zO-j8M" secondAttribute="leading" constant="87" id="qdE-HX-UzX"/>
-                            <constraint firstItem="Lp6-7p-Lvx" firstAttribute="top" secondItem="1h2-zO-j8M" secondAttribute="top" constant="50" id="rOu-OL-RAF"/>
+                            <constraint firstItem="qrA-mG-i4t" firstAttribute="top" secondItem="Lp6-7p-Lvx" secondAttribute="bottom" constant="33" id="vmb-YH-wVi"/>
                             <constraint firstItem="Lp6-7p-Lvx" firstAttribute="centerX" secondItem="1h2-zO-j8M" secondAttribute="centerX" id="yFB-DX-c3l"/>
-                            <constraint firstItem="1h2-zO-j8M" firstAttribute="trailing" secondItem="fQ0-X2-m5D" secondAttribute="trailing" constant="87" id="yQh-Bm-aL3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1h2-zO-j8M"/>
                     </view>
                     <connections>
-                        <outlet property="scrollview" destination="fQ0-X2-m5D" id="f6b-RV-Kw8"/>
                         <outlet property="test" destination="DO6-5M-WbM" id="flD-ik-miL"/>
                     </connections>
                 </viewController>
@@ -382,6 +380,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSe-50-kds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="155.07246376811597" y="897.99107142857133"/>
+        </scene>
+        <!--Daily Entries View Controller-->
+        <scene sceneID="uUV-oI-GOH">
+            <objects>
+                <viewController id="mY5-HJ-5b1" customClass="DailyEntriesViewController" customModule="Are_You_Happy_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wqn-tl-Fbu">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="501"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQ0-X2-m5D">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="501"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fQ0-X2-m5D" secondAttribute="trailing" id="0mt-Xf-Tf1"/>
+                            <constraint firstAttribute="bottom" secondItem="fQ0-X2-m5D" secondAttribute="bottom" id="2T9-Ob-p0J"/>
+                            <constraint firstItem="fQ0-X2-m5D" firstAttribute="top" secondItem="wqn-tl-Fbu" secondAttribute="top" id="Zwb-6v-tv2"/>
+                            <constraint firstItem="fQ0-X2-m5D" firstAttribute="leading" secondItem="wqn-tl-Fbu" secondAttribute="leading" id="a9J-ah-E16"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dailyEntriesScrollView" destination="fQ0-X2-m5D" id="aQu-Rm-Jse"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dh2-zU-v2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686.9565217391305" y="857.47767857142856"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
