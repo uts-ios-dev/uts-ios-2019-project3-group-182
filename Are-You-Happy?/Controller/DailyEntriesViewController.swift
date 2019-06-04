@@ -16,6 +16,8 @@ class DailyEntriesViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var dailyEntriesTable: UITableView!
     
     
+    var items: [String] = ["test", "ok"]
+    
     override func viewDidLoad() {
         
         //super.viewDidLoad()
@@ -43,6 +45,10 @@ class DailyEntriesViewController: UIViewController, UITableViewDelegate, UITable
 //        dailyEntries.addSubview(label)
         loadTableCells()
         
+        //self.tableView.registerClass()
+        
+        
+        
     }
     
     func loadTableCells() {
@@ -56,12 +62,16 @@ class DailyEntriesViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let test = UITableViewCell()
-        return test
+        // return UITableViewCell()
+        //var cell:UITableViewCell = self.dailyEntriesTable.dequeueReusableCell(withIdentifier: "cell") as! UITableViewCell
+        
+        cell.textLabel?.text = self.items[indexPath.row]
+        
+        return cell
     }
     
 }
