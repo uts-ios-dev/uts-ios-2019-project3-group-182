@@ -133,19 +133,6 @@ class ActivitiesViewController: UIViewController {
     }
     
     func addDataToStore() {
-        // TODO: store data
-        // storage : saveDailyEntry(dailyentry object)
-        //date:string, rating: Int, activityNames: [String]
-        
-        let date = Date()
-        let format = DateFormatter()
-        format.dateFormat = "dd-MM-yyyy"
-        let formattedDate = format.string(from: )
-        
-        //let calendar = Calendar.current
-        //calendar.component(.day, from: date)
-        
-        //let tempDailyEntry = DailyEntry(formattedDate, rating, activityNames[])
         let tempDailyEntry = DailyEntry(getCurrentDate(), rating, findAllActiveActivities())
         let storage = Storage()
         do {

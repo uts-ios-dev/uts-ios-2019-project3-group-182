@@ -49,6 +49,7 @@ struct Storage: Codable {
     
     func saveDailyEntry(_ dailyEntry: [DailyEntry]) throws {
         let data = try JSONEncoder().encode(dailyEntry)
+        
         try write(data, to: dailyEntriesArchiveURL)
     }
     

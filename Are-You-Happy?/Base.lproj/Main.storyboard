@@ -87,6 +87,7 @@
                     </view>
                     <connections>
                         <segue destination="RvV-nM-Vjo" kind="show" identifier="ActivitesViewSegue" id="DqV-Rj-Mzt"/>
+                        <segue destination="1ss-rb-z3H" kind="show" identifier="StatsViewSegue" id="CFp-gw-cbY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -266,6 +267,7 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="statsID"/>
                         <constraints>
                             <constraint firstItem="1h2-zO-j8M" firstAttribute="trailing" secondItem="qrA-mG-i4t" secondAttribute="trailing" constant="20" id="3j6-de-gNH"/>
                             <constraint firstItem="qrA-mG-i4t" firstAttribute="leading" secondItem="1h2-zO-j8M" secondAttribute="leading" constant="20" id="XMD-CJ-3Zv"/>
@@ -428,6 +430,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="CFp-gw-cbY"/>
         <segue reference="ljc-ru-XUD"/>
     </inferredMetricsTieBreakers>
 </document>
