@@ -17,9 +17,21 @@ class DailyEntriesViewController: UIViewController, UITableViewDelegate, UITable
     
     
     var items: [String] = ["test", "ok"]
+    var dailyDates: [String] = []
+    var dailyRating: [String] = []
+    var dailyActivities: [String] = []
     
     override func viewDidLoad() {
-        
+        let storage = Storage()
+        var dailyEntries: [DailyEntry] = []
+        do {
+            dailyEntries = try storage.loadDailyEntries()
+        } catch {}
+        for i in 0..<dailyEntries.count {
+            dailyDates.append(dailyEntries[i].date)
+            dailyRating.append("\(dailyEntries[i].rating)")
+            //let activityNames = dailyEntries[i].activityNames
+        }
         //super.viewDidLoad()
 //        let storage = Storage()
 //        var dailyEntries: [DailyEntry] = []
@@ -43,7 +55,7 @@ class DailyEntriesViewController: UIViewController, UITableViewDelegate, UITable
 //        let label = UILabel(frame: frame)
 //        label.text = "testing"
 //        dailyEntries.addSubview(label)
-        loadTableCells()
+        //loadTableCells()
         
         //self.tableView.registerClass()
         
@@ -62,16 +74,26 @@ class DailyEntriesViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return dailyDates.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // return UITableViewCell()
         //var cell:UITableViewCell = self.dailyEntriesTable.dequeueReusableCell(withIdentifier: "cell") as! UITableViewCell
         
-        cell.textLabel?.text = self.items[indexPath.row]
+        //cell.textLabel?.text = self.items[indexPath.row]
         
-        return cell
+        //return cell
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cellID")
+        
+        if cell == nil {
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cellID")
+        }
+        
+        cell!.textLabel?.text = dailyDates[indexPath.row]
+        cell!.detailTextLabel?.text = dailyRating[indexPath.row]
+        print(indexPath.row)
+        return cell!
     }
     
 }
