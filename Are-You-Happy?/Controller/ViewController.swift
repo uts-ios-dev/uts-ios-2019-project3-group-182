@@ -11,11 +11,11 @@ class ViewController: UIViewController {
     
     //TODO: Rename function names
     @IBAction func happiestButtonPressed(_ sender: Any) {
-        setRatingAndGoToActivities(1)
+        setRatingAndGoToActivities(5)
     }
     
     @IBAction func gourPressed(_ sender: Any) {
-        setRatingAndGoToActivities(2)
+        setRatingAndGoToActivities(4)
     }
     
     @IBAction func threePressed(_ sender: Any) {
@@ -23,11 +23,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func twoPressed(_ sender: Any) {
-        setRatingAndGoToActivities(4)
+        setRatingAndGoToActivities(2)
     }
     
     @IBAction func onePressed(_ sender: Any) {
-        setRatingAndGoToActivities(5)
+        setRatingAndGoToActivities(1)
     }
     
     func setRatingAndGoToActivities(_ rating: Int) {
