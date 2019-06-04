@@ -57,9 +57,26 @@ class ActivitiesViewController: UIViewController {
     }
     
     @IBAction func clearAllEntriesButtonPress(_ sender: Any) {
+        let emptyArray: [DailyEntry] = []
+        let storage = Storage()
+        do {
+            try storage.saveDailyEntry(emptyArray)
+        } catch {}
     }
     
     @IBAction func addDummyDataButtonPress(_ sender: Any) {
+        var dummyData: [DailyEntry] = []
+        //dummyData.append(DailyEntry("01.01.2000", 1, findAllActiveActivities()))
+        for i in 0..<30 {
+            let rand = Int.random(in: 1..<6)
+            let date = "0\(i).01.2000"
+            dummyData.append(DailyEntry(date, rand, findAllActiveActivities()))
+        }
+        
+        let storage = Storage()
+        do {
+            try storage.saveDailyEntry(dummyData)
+        } catch {}
     }
     
     // Activity pressed action for dynamic activities
