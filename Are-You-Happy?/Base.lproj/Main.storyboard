@@ -389,20 +389,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="374" height="501"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQ0-X2-m5D">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cco-2c-Lw6">
                                 <rect key="frame" x="0.0" y="0.0" width="374" height="501"/>
-                            </scrollView>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="fQ0-X2-m5D" secondAttribute="trailing" id="0mt-Xf-Tf1"/>
-                            <constraint firstAttribute="bottom" secondItem="fQ0-X2-m5D" secondAttribute="bottom" id="2T9-Ob-p0J"/>
-                            <constraint firstItem="fQ0-X2-m5D" firstAttribute="top" secondItem="wqn-tl-Fbu" secondAttribute="top" id="Zwb-6v-tv2"/>
-                            <constraint firstItem="fQ0-X2-m5D" firstAttribute="leading" secondItem="wqn-tl-Fbu" secondAttribute="leading" id="a9J-ah-E16"/>
-                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pl7-yR-2A7"/>
                     </view>
                     <connections>
-                        <outlet property="dailyEntriesScrollView" destination="fQ0-X2-m5D" id="aQu-Rm-Jse"/>
+                        <outlet property="dailyEntriesTable" destination="Cco-2c-Lw6" id="uzU-vT-F28"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dh2-zU-v2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
