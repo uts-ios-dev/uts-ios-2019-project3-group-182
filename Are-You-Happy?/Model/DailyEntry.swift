@@ -1,8 +1,16 @@
 import Foundation
 
 // Struct for the Daily Entry
-struct DailyEntry: Codable {
-    var date: String
-    var rating: Int
-    var activityNames: [String]
+class DailyEntry: Codable {
+    let date: String
+    let rating: Int
+    let activityNames: [String]
+    
+    init( _ date: String, _ rating: Int, _ activityNames: [String]) {
+        self.date = date
+        self.rating = rating
+        self.activityNames = activityNames
+    }
+    
+    
 }

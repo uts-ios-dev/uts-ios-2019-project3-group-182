@@ -27,14 +27,16 @@ class ActivitiesViewController: UIViewController {
         } catch {
             
         }
+        print(activities.count)
         for i in 0..<activities.count {
+            
             let frame1 = CGRect(x: 20 + (i * 70), y: 20, width: 50, height: 50 )
-            let imageName = activities[i].getImage()
+            let imageName = activities[i].image
             let image = UIImage(named: imageName)
             let button = UIButton(frame: frame1)
             button.setImage(image, for: .normal)
             if(activities[i].active == true) {
-                button.tintColor = colors.uiColorOptions[activities[i].getcolor()]
+                button.tintColor = colors.uiColorOptions[activities[i].color]
             } else {
                 button.tintColor = defaultFalseColor
             }
@@ -46,6 +48,7 @@ class ActivitiesViewController: UIViewController {
         }
         if(checkAnyActive()) {
             nextButton.backgroundColor = UIColor.green
+            nextButton.isEnabled = true
         }
     }
     
@@ -61,7 +64,7 @@ class ActivitiesViewController: UIViewController {
     // Change and activate buttons
     func changeColor(_ button: UIButton) {
         if(button.tintColor == defaultFalseColor) {
-            button.tintColor = colors.uiColorOptions[activities[findButtonID(button)].getcolor()]
+            button.tintColor = colors.uiColorOptions[activities[findButtonID(button)].color]
             nextButton.backgroundColor = UIColor.green
             nextButton.isEnabled = true
         } else {
@@ -109,15 +112,16 @@ class ActivitiesViewController: UIViewController {
         let date = Date()
         let format = DateFormatter()
         format.dateFormat = "dd-MM-yyyy"
-        //let formattedDate = format.string(from: )
+        let formattedDate = format.string(from: )
         
         //let calendar = Calendar.current
         //calendar.component(.day, from: date)
         
-        //let tempDailyEntry = DailyEntry(formattedDate, rating, activityNames[findButtonID(UIButton)])
+        //let tempDailyEntry = DailyEntry(formattedDate, rating, activityNames[])
+        let tempDailyEntry = DailyEntry(getCurrentDate(), rating, findAllActiveActivities())
         let storage = Storage()
         do {
-            //try //storage.saveDailyEntry(tempDailyEntry)
+            //try storage.saveDailyEntry(tempDailyEntry)
         } catch {}
     }
     
@@ -127,5 +131,15 @@ class ActivitiesViewController: UIViewController {
         formatter.dateFormat = "dd.MM.yyyy"
         let result = formatter.string(from: date)
         return result
+    }
+    
+    func findAllActiveActivities() -> [String] {
+        var activeActivities: [String] = []
+        for i in 0..<buttonArray.count {
+            if(buttonArray[i].tintColor != defaultFalseColor) {
+                activeActivities.append(activities[i].name)
+            }
+        }
+        return activeActivities
     }
 }

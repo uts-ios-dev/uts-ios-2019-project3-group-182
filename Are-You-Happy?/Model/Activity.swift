@@ -13,19 +13,5 @@ class Activity: Codable {
         self.active = active
         self.image = image
         self.color = color
-    }
-    
-    func getImage() -> String{
-        return image
-    }
-    func getName() -> String{
-        return name
-    }
-    func getActive() -> Bool{
-        return active
-    }
-    func getcolor() -> Int{
-        return color
-    }
-    
+    }    
 }
