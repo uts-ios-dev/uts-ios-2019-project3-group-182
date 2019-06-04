@@ -9,24 +9,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
-    @IBAction func veryHappyButton(_ sender: Any) {
+    //TODO: Rename function names
+    @IBAction func happiestButtonPressed(_ sender: Any) {
         setRatingAndGoToActivities(1)
     }
     
-    @IBAction func happyButton(_ sender: Any) {
+    @IBAction func gourPressed(_ sender: Any) {
         setRatingAndGoToActivities(2)
     }
     
-    @IBAction func normalButton(_ sender: Any) {
+    @IBAction func threePressed(_ sender: Any) {
         setRatingAndGoToActivities(3)
     }
     
-    @IBAction func sadButton(_ sender: Any) {
+    @IBAction func twoPressed(_ sender: Any) {
         setRatingAndGoToActivities(4)
     }
     
-    @IBAction func verySadButton(_ sender: Any) {
+    @IBAction func onePressed(_ sender: Any) {
         setRatingAndGoToActivities(5)
     }
     
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func checkTodaysEntry() {
+    /*func checkTodaysEntry() {
         let storage = Storage()
         var dailyEntries: [DailyEntry] = []
         do {
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         formatter.dateFormat = "dd.MM.yyyy"
         let result = formatter.string(from: date)
         return result
-    }
+    }*/
     
 }
 
