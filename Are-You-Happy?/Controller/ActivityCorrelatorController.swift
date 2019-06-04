@@ -94,7 +94,7 @@ class ActivityCorrelatorController: UIViewController, UIPickerViewDelegate, UIPi
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //imageView.image =
+        imageView.image = UIImage(named: findImageof(activitiesList[row]))
         pickActivityToView(activitiesList[row])
         averageRating()
         
@@ -109,6 +109,20 @@ class ActivityCorrelatorController: UIViewController, UIPickerViewDelegate, UIPi
             withoutActivityLabel.text = "N/A"
         }
         
+    }
+    
+    func findImageof( _ actName: String) -> String{
+        let storage = Storage()
+        var act: [Activity] = []
+        do {
+        act = try storage.loadActivities()
+        } catch {}
+        for i in 0..<act.count {
+            if(actName == act[i].name) {
+                return act[i].image
+            }
+        }
+        return "N/A"
     }
     
 }
