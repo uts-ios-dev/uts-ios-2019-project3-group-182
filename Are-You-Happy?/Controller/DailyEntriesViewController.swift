@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class DailyEntriesViewController: UIViewController {
+class DailyEntriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
     //@IBOutlet weak var dailyEntriesScrollView: UIScrollView!
     @IBOutlet weak var dailyEntriesTable: UITableView!
     
@@ -39,8 +41,27 @@ class DailyEntriesViewController: UIViewController {
 //        let label = UILabel(frame: frame)
 //        label.text = "testing"
 //        dailyEntries.addSubview(label)
-
+        loadTableCells()
         
+    }
+    
+    func loadTableCells() {
+        
+        //dailyEntriesTable.sectionIndexMinimumDisplayRowCount = 5
+        //let test = UITableViewCell()
+        
+        //test.textLabel = "lol"
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let test = UITableViewCell()
+        return test
     }
     
 }

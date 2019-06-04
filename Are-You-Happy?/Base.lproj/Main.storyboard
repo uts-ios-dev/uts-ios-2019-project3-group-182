@@ -393,6 +393,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="374" height="501"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mY5-HJ-5b1" id="OwS-1e-q88"/>
+                                    <outlet property="delegate" destination="mY5-HJ-5b1" id="aDC-Gj-Iho"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
