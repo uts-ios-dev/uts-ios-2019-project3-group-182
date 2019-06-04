@@ -56,6 +56,12 @@ class ActivitiesViewController: UIViewController {
         addDataToStore()
     }
     
+    @IBAction func clearAllEntriesButtonPress(_ sender: Any) {
+    }
+    
+    @IBAction func addDummyDataButtonPress(_ sender: Any) {
+    }
+    
     // Activity pressed action for dynamic activities
     @objc func activityPressed( _ button : UIButton) {
         changeColor(button)

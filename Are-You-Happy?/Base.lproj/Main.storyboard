@@ -135,6 +135,22 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="ljc-ru-XUD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azi-yh-RED">
+                                <rect key="frame" x="256" y="537" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AddDummyData"/>
+                                <connections>
+                                    <action selector="addDummyDataButtonPress:" destination="RvV-nM-Vjo" eventType="touchUpInside" id="Pj9-uh-gfc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyu-ey-Cyv">
+                                <rect key="frame" x="58" y="537" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ClearAllEntries"/>
+                                <connections>
+                                    <action selector="clearAllEntriesButtonPress:" destination="RvV-nM-Vjo" eventType="touchUpInside" id="yvx-jN-qhx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
