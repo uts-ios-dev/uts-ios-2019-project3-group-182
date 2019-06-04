@@ -16,4 +16,5 @@ class StatsViewController: UIViewController {
         //self.scrollview.addSubview(testLabel)
         //test.text = "\(dailyEntries.count)"
     }
+    
 }
