@@ -121,7 +121,7 @@ class ActivitiesViewController: UIViewController {
         let tempDailyEntry = DailyEntry(getCurrentDate(), rating, findAllActiveActivities())
         let storage = Storage()
         do {
-            //try storage.saveDailyEntry(tempDailyEntry)
+            try storage.saveDailyEntry(tempDailyEntry)
         } catch {}
     }
     

@@ -2,7 +2,7 @@ import Foundation
 
 // Struct for storing data
 struct Storage: Codable {
-    //let dailyEntriesArchiveURL: URL
+    let dailyEntriesArchiveURL: URL
     let activitiesArchiveURL: URL
     
     // Data error enums
@@ -15,8 +15,8 @@ struct Storage: Codable {
         // Initiate .json data stores
         let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         // Set up URL
-        //dailyEntriesArchiveURL = //directory.appendingPathComponent("daily_entries")
-            //.appendingPathExtension("json")
+        dailyEntriesArchiveURL = directory.appendingPathComponent("daily_entries")
+            .appendingPathExtension("json")
         activitiesArchiveURL = directory.appendingPathComponent("activities")
             .appendingPathExtension("json")
     }
@@ -39,31 +39,31 @@ struct Storage: Codable {
         }
     }
     
-//    func loadDailyEntries() throws -> [DailyEntry] {
-//        //let data = try read(from: dailyEntriesArchiveURL)
-////        if let dailyEntry = try? JSONDecoder().decode([DailyEntry].self, from: data) {
-////            return dailyEntry
-////        }
-//        throw DataError.dataNotFound
-//    }
-//    
-//    func saveDailyEntry(_ dailyEntry: [DailyEntry]) throws {
-//        let data = try JSONEncoder().encode(dailyEntry)
-//        //try write(data, to: dailyEntriesArchiveURL)
-//    }
-//    
-//    func saveDailyEntry(_ dailyEntry: DailyEntry) throws {
-//        //let data = try JSONEncoder().encode(dailyEntry)
-//        //var allData = try loadDailyEntries()
-//        var allData: [DailyEntry] = []
-//        do {
-//            allData = try loadDailyEntries()
-//        } catch {
-//            
-//        }
-//        allData.append(dailyEntry)
-//        try saveDailyEntry(allData)
-//    }
+    func loadDailyEntries() throws -> [DailyEntry] {
+        let data = try read(from: dailyEntriesArchiveURL)
+        if let dailyEntry = try? JSONDecoder().decode([DailyEntry].self, from: data) {
+            return dailyEntry
+        }
+        throw DataError.dataNotFound
+    }
+    
+    func saveDailyEntry(_ dailyEntry: [DailyEntry]) throws {
+        let data = try JSONEncoder().encode(dailyEntry)
+        try write(data, to: dailyEntriesArchiveURL)
+    }
+    
+    func saveDailyEntry(_ dailyEntry: DailyEntry) throws {
+        //let data = try JSONEncoder().encode(dailyEntry)
+        //var allData = try loadDailyEntries()
+        var allData: [DailyEntry] = []
+        do {
+            allData = try loadDailyEntries()
+        } catch {
+            
+        }
+        allData.append(dailyEntry)
+        try saveDailyEntry(allData)
+    }
     
     func loadActivities() throws -> [Activity] {
         let data = try read(from: activitiesArchiveURL)

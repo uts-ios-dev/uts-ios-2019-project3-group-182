@@ -11,14 +11,14 @@ class StatsViewController: UIViewController {
         let storage = Storage()
         var dailyEntries: [DailyEntry] = []
         do {
-            //dailyEntries = try storage.loadDailyEntries()
+            dailyEntries = try storage.loadDailyEntries()
         } catch {}
-        let frame = CGRect(x: 50, y: 50, width: 50, height: 50)
+        
         for i in 0..<dailyEntries.count {
-            
+            let frame = CGRect(x: 50 + i*50, y: 50, width: 50, height: 50)
             let date = dailyEntries[i].date
-            let rating = dailyEntries[i].rating
-            let activityNames = dailyEntries[i].activityNames
+            //let rating = dailyEntries[i].rating
+            //let activityNames = dailyEntries[i].activityNames
             
             
             let dateLabel = UILabel(frame: frame )
@@ -29,10 +29,10 @@ class StatsViewController: UIViewController {
             self.scrollview.addSubview(dateLabel)
             
         }
-        let testLabel = UILabel(frame: frame)
-        testLabel.text = "\(dailyEntries.count)"
-        self.scrollview.addSubview(testLabel)
-        test.text = "testinnnngs"
+        //let testLabel = UILabel(frame: frame)
+        //testLabel.text = "\(dailyEntries.count)"
+        //self.scrollview.addSubview(testLabel)
+        test.text = "\(dailyEntries.count)"
         
     }
 }
