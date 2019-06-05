@@ -582,6 +582,7 @@
                         <viewLayoutGuide key="safeArea" id="lan-jb-IPn"/>
                     </view>
                     <connections>
+                        <outlet property="activityPicker" destination="hCe-Z6-HLy" id="BFv-uc-rab"/>
                         <outlet property="imageView" destination="1Aj-j5-lg6" id="hyK-Hh-C88"/>
                         <outlet property="withActivityLabel" destination="Jxy-oF-gXQ" id="8Lp-6L-drg"/>
                         <outlet property="withoutActivityLabel" destination="e3t-Cy-KSr" id="EXG-GJ-4sc"/>
@@ -622,7 +623,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Mhl-WF-QFa"/>
+        <segue reference="CFp-gw-cbY"/>
         <segue reference="ljc-ru-XUD"/>
     </inferredMetricsTieBreakers>
 </document>

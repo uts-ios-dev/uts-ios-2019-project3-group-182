@@ -14,6 +14,7 @@ class ActivityCorrelatorController: UIViewController, UIPickerViewDelegate, UIPi
     @IBOutlet weak var withActivityLabel: UILabel!
     @IBOutlet weak var withoutActivityLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var activityPicker: UIPickerView!
     
     var data: [DailyEntry] = []
     var activitiesList: [String] = []
@@ -31,7 +32,13 @@ class ActivityCorrelatorController: UIViewController, UIPickerViewDelegate, UIPi
             data = try storage.loadDailyEntries()
         } catch {}
         getAllActivities(data)
+        setupStart()
     }
+    func setupStart() {
+        activityPicker.selectRow(0, inComponent: 0, animated: true)
+        pickerView(activityPicker, didSelectRow: 0, inComponent: 0)
+    }
+    
     func pickActivityToView( _ activity: String) {
         withActivityRating = []
         withoutActivityRating = []
@@ -95,6 +102,7 @@ class ActivityCorrelatorController: UIViewController, UIPickerViewDelegate, UIPi
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         imageView.image = UIImage(named: findImageof(activitiesList[row]))
+        imageView.tintColor = colors.uiColorOptions[findColorof(activitiesList[row])]
         pickActivityToView(activitiesList[row])
         averageRating()
         
@@ -103,12 +111,25 @@ class ActivityCorrelatorController: UIViewController, UIPickerViewDelegate, UIPi
         } else {
             withActivityLabel.text = "N/A"
         }
-        if(withActAvg > 0) {
+        if(withoutActAvg > 0) {
             withoutActivityLabel.text = String(format: "%.1f", withoutActAvg)
         } else {
             withoutActivityLabel.text = "N/A"
         }
         
+    }
+    func findColorof( _ actName: String) -> Int{
+        let storage = Storage()
+        var act: [Activity] = []
+        do {
+            act = try storage.loadActivities()
+        } catch {}
+        for i in 0..<act.count {
+            if(actName == act[i].name) {
+                return act[i].color
+            }
+        }
+        return 0
     }
     
     func findImageof( _ actName: String) -> String{
