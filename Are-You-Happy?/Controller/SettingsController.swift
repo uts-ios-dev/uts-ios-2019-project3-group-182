@@ -19,10 +19,6 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     var colorRow: Int = 0
     var imageRow: Int = 0
     var defaultActive: Bool = false
-    // move these into model, or enum or something
-    var colorOptions = ["red", "orange", "yellow", "green", "cyan", "blue", "brown", "pink", "purple"]
-    var uicolorOptions = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.green, UIColor.cyan, UIColor.blue, UIColor.brown, UIColor.magenta, UIColor.purple]
-    var imageOptions = ["airplane", "bday", "beer", "bike", "bus", "car", "cloudy day", "coffee", "cupcake", "dinner", "food and wine", "gaming", "goals", "groceries", "hail", "hamburger", "headache", "heavy rain", "meditate", "motorbike", "movies", "party cloudy day", "pizza", "public transport", "raining", "running", "sandwich", "sleeping", "sneeze", "snowing", "storm", "sunny", "taxi", "tea", "traffic jam", "train", "truck", "vr", "walk", "windy", "wine", "workout"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,14 +41,16 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     @IBAction func addActivity(_ sender: Any) {
-        // grab data from namefield
-        // create new activity object first?
-        //save to json
-        let tempActivity = Activity(nameField.text!, defaultActive, imageOptions[imageRow], colorRow)
+        let tempActivity = Activity(nameField.text!, defaultActive, colors.imageOptions[imageRow], colorRow)
         let storage = Storage()
         do {
             try storage.saveActivities(tempActivity)
         } catch {}
+        resetFields()
+    }
+    
+    // Resets the pickerviews and fields
+    func resetFields() {
         colourPicker.selectRow(0, inComponent: 0, animated: true)
         imagePicker.selectRow(0, inComponent: 0, animated: true)
         nameField.text = ""
@@ -60,6 +58,8 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         pickerView(colourPicker, didSelectRow: 0, inComponent: 0)
         pickerView(imagePicker, didSelectRow: 0, inComponent: 0)
     }
+    
+    // Delete all Current Activities in Json file
     @IBAction func DeleteAllActivities(_ sender: Any) {
         let emptyArray: [Activity] = []
         let storage = Storage()
@@ -74,28 +74,28 @@ class SettingsController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if(pickerView.tag == 1) {
-            return imageOptions.count
+            return colors.imageOptions.count
         } else {
-            return colorOptions.count
+            return colors.colorOptions.count
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(pickerView.tag == 1) {
-            return imageOptions[row]
+            return colors.imageOptions[row]
         } else {
-            return colorOptions[row]
+            return colors.colorOptions[row]
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(pickerView.tag == 1) {
             //change image view
-            imageView.image = UIImage(named: imageOptions[row])
+            imageView.image = UIImage(named: colors.imageOptions[row])
             imageRow = row
         } else {
             // change colour of image? or something
-            imageView.tintColor = uicolorOptions[row]
+            imageView.tintColor = colors.uiColorOptions[row]
             colorRow = row
         }
     }
