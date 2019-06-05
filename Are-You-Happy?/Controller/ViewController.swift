@@ -53,7 +53,7 @@ class ViewController: UIViewController {
                 performSegue(withIdentifier: "StatsViewSegue", sender: nil)
             }
         }
-    }
+    }//
     
     func getCurrentDate() -> String {
         let date = Date()
