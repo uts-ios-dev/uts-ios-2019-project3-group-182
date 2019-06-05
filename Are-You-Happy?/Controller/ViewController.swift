@@ -10,11 +10,11 @@ class ViewController: UIViewController {
     }
     
     //TODO: Rename function names
-    @IBAction func happiestButtonPressed(_ sender: Any) {
+    @IBAction func fiveButtonPressed(_ sender: Any) {
         setRatingAndGoToActivities(5)
     }
     
-    @IBAction func gourPressed(_ sender: Any) {
+    @IBAction func fourPressed(_ sender: Any) {
         setRatingAndGoToActivities(4)
     }
     

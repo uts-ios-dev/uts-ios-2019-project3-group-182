@@ -46,14 +46,14 @@
                                         <rect key="frame" x="165" y="0.0" width="30" height="51"/>
                                         <state key="normal" title=":)"/>
                                         <connections>
-                                            <action selector="gourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tz2-tL-TSd"/>
+                                            <action selector="fourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ni9-Fr-R1q"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-hY-8ui">
                                         <rect key="frame" x="220" y="0.0" width="30" height="51"/>
                                         <state key="normal" title=":D"/>
                                         <connections>
-                                            <action selector="happiestButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9IW-tI-o9j"/>
+                                            <action selector="fiveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m83-hw-pxU"/>
                                         </connections>
                                     </button>
                                 </subviews>
