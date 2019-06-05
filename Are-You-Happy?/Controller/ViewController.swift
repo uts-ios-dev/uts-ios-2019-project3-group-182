@@ -33,11 +33,13 @@ class ViewController: UIViewController {
     @IBAction func onePressed(_ sender: Any) {
         setRatingAndGoToActivities(1)
     }
+    
     // set Rating
     func setRatingAndGoToActivities(_ rating: Int) {
         self.rating = rating
         performSegue(withIdentifier: "ActivitesViewSegue", sender: nil)
     }
+    
     // set ActivitiesViewController rating to current rating
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "ActivitesViewSegue"){
@@ -46,6 +48,9 @@ class ViewController: UIViewController {
         }
     }
     
+    /* This function checks if the user has already made an entry for today by comparing dates
+       If they have, they are redirected straight to the statistics page
+    */
     func checkTodaysEntry() {
         let storage = Storage()
         var dailyEntries: [DailyEntry] = []
@@ -59,6 +64,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // Gets the current date and returns it as a String
     func getCurrentDate() -> String {
         let date = Date()
         let formatter = DateFormatter()
