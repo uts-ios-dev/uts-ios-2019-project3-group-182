@@ -18,8 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-s4-xb4" userLabel="Buttons View">
-                                <rect key="frame" x="7" y="423" width="400" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rate today's mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5Z-50-EOj">
+                                <rect key="frame" x="107" y="54" width="201" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bi9-Pl-Kug">
+                                <rect key="frame" x="20" y="44" width="79" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="Vou-QB-NQU" kind="show" id="etp-xC-cub"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-s4-xb4" userLabel="Buttons View">
+                                <rect key="frame" x="-13" y="233" width="440" height="72"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ats-ax-VcE">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
@@ -31,28 +44,28 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecM-JG-p5V">
-                                        <rect key="frame" x="82" y="0.0" width="72" height="72"/>
+                                        <rect key="frame" x="92" y="0.0" width="72" height="72"/>
                                         <state key="normal" image="sad"/>
                                         <connections>
                                             <action selector="twoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Bh-jT-FRc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3d-y5-xoZ">
-                                        <rect key="frame" x="164" y="0.0" width="72" height="72"/>
+                                        <rect key="frame" x="184" y="0.0" width="72" height="72"/>
                                         <state key="normal" image="neutral"/>
                                         <connections>
                                             <action selector="threePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwD-qu-eNI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xm-RN-Exn">
-                                        <rect key="frame" x="246" y="0.0" width="72" height="72"/>
+                                        <rect key="frame" x="276" y="0.0" width="72" height="72"/>
                                         <state key="normal" image="happy"/>
                                         <connections>
                                             <action selector="fourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ni9-Fr-R1q"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-hY-8ui">
-                                        <rect key="frame" x="328" y="0.0" width="72" height="72"/>
+                                        <rect key="frame" x="368" y="0.0" width="72" height="72"/>
                                         <state key="normal" image="veryHappy"/>
                                         <connections>
                                             <action selector="fiveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m83-hw-pxU"/>
@@ -60,29 +73,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate today's mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5Z-50-EOj">
-                                <rect key="frame" x="135.5" y="64" width="143" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bi9-Pl-Kug">
-                                <rect key="frame" x="20" y="58" width="57" height="30"/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="Vou-QB-NQU" kind="show" id="etp-xC-cub"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vkI-YV-5N3" firstAttribute="bottom" secondItem="5VT-s4-xb4" secondAttribute="bottom" constant="367" id="6Mn-2i-P4E"/>
-                            <constraint firstItem="B5Z-50-EOj" firstAttribute="leading" secondItem="Bi9-Pl-Kug" secondAttribute="trailing" constant="58.5" id="AmR-jn-I9c"/>
-                            <constraint firstItem="Bi9-Pl-Kug" firstAttribute="top" secondItem="vkI-YV-5N3" secondAttribute="top" constant="14" id="Bkw-pz-jNJ"/>
-                            <constraint firstItem="Bi9-Pl-Kug" firstAttribute="leading" secondItem="vkI-YV-5N3" secondAttribute="leading" constant="20" id="Df5-nI-OR5"/>
-                            <constraint firstItem="B5Z-50-EOj" firstAttribute="centerX" secondItem="vkI-YV-5N3" secondAttribute="centerX" id="ED1-8b-jWb"/>
-                            <constraint firstItem="B5Z-50-EOj" firstAttribute="top" secondItem="vkI-YV-5N3" secondAttribute="top" constant="20" id="MlS-bi-Ig2"/>
-                            <constraint firstItem="5VT-s4-xb4" firstAttribute="centerX" secondItem="B5Z-50-EOj" secondAttribute="centerX" id="dG3-4B-OIW"/>
+                            <constraint firstItem="B5Z-50-EOj" firstAttribute="leading" secondItem="vkI-YV-5N3" secondAttribute="leading" constant="107" id="04H-vz-HOB"/>
+                            <constraint firstItem="Bi9-Pl-Kug" firstAttribute="top" secondItem="vkI-YV-5N3" secondAttribute="top" id="BHS-B7-AfH"/>
+                            <constraint firstItem="B5Z-50-EOj" firstAttribute="top" secondItem="vkI-YV-5N3" secondAttribute="top" constant="10" id="IIx-Wp-HxA"/>
+                            <constraint firstItem="vkI-YV-5N3" firstAttribute="trailing" secondItem="B5Z-50-EOj" secondAttribute="trailing" constant="106" id="Pho-sd-vZs"/>
+                            <constraint firstItem="vkI-YV-5N3" firstAttribute="bottom" secondItem="5VT-s4-xb4" secondAttribute="bottom" constant="557" id="ZeZ-9q-Fvw"/>
+                            <constraint firstItem="5VT-s4-xb4" firstAttribute="centerX" secondItem="B5Z-50-EOj" secondAttribute="centerX" id="a3X-TL-wzn"/>
+                            <constraint firstItem="Bi9-Pl-Kug" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c3t-xG-f2D"/>
+                            <constraint firstItem="B5Z-50-EOj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yja-9z-XQq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vkI-YV-5N3"/>
                     </view>
@@ -93,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="158" y="133"/>
+            <point key="canvasLocation" x="157.97101449275362" y="132.58928571428572"/>
         </scene>
         <!--Activities View Controller-->
         <scene sceneID="lpm-Gq-L6D">
@@ -604,6 +605,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="etp-xC-cub"/>
         <segue reference="CFp-gw-cbY"/>
-        <segue reference="l2M-MT-S3t"/>
+        <segue reference="ljc-ru-XUD"/>
     </inferredMetricsTieBreakers>
 </document>
