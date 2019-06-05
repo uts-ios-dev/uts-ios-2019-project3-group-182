@@ -19,18 +19,22 @@ class ActivitiesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let activites = 4 // TODO: Load activites list from storage.
-        // Render activites based on user activity list
         let storage = Storage()
         do {
             activities = try storage.loadActivities()
         } catch {
             
         }
-        print(activities.count)
+        let xPos = [20, 100, 180, 260, 20, 100, 180, 260, 20, 100, 180, 260, 20, 100, 180, 260, 20, 100, 180, 260]
         for i in 0..<activities.count {
-            
-            let frame1 = CGRect(x: 20 + (i * 70), y: 20, width: 50, height: 50 )
+            var frame1 = CGRect(x: xPos[i], y: 20, width: 50, height: 50 )
+            if (i > 11) {
+                frame1 = CGRect(x: xPos[i], y: 20 + 240, width: 50, height: 50 )
+            } else if(i > 7) {
+                frame1 = CGRect(x: xPos[i], y: 20 + 160, width: 50, height: 50 )
+            } else if( i > 3) {
+                frame1 = CGRect(x: xPos[i], y: 20 + 80, width: 50, height: 50 )
+            }
             let imageName = activities[i].image
             let image = UIImage(named: imageName)
             let button = UIButton(frame: frame1)
