@@ -9,6 +9,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        checkTodaysEntry()
+    }
+    
     // Rating of 5 is sent to Rating function
     @IBAction func fiveButtonPressed(_ sender: Any) {
         setRatingAndGoToActivities(5)
@@ -42,7 +46,7 @@ class ViewController: UIViewController {
         }
     }
     
-    /*func checkTodaysEntry() {
+    func checkTodaysEntry() {
         let storage = Storage()
         var dailyEntries: [DailyEntry] = []
         do {
@@ -53,7 +57,7 @@ class ViewController: UIViewController {
                 performSegue(withIdentifier: "StatsViewSegue", sender: nil)
             }
         }
-    }//
+    }
     
     func getCurrentDate() -> String {
         let date = Date()
@@ -61,7 +65,7 @@ class ViewController: UIViewController {
         formatter.dateFormat = "dd.MM.yyyy"
         let result = formatter.string(from: date)
         return result
-    }*/
+    }
     
 }
 
