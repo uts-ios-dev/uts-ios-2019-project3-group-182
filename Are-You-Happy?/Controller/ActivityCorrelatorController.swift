@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class ActivityCorrelatorController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -15,6 +16,7 @@ class ActivityCorrelatorController: UIViewController, UIPickerViewDelegate, UIPi
     @IBOutlet weak var withoutActivityLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityPicker: UIPickerView!
+    @IBOutlet weak var chtBar: BarChartView!
     
     var data: [DailyEntry] = []
     var activitiesList: [String] = []
@@ -116,7 +118,7 @@ class ActivityCorrelatorController: UIViewController, UIPickerViewDelegate, UIPi
         } else {
             withoutActivityLabel.text = "N/A"
         }
-        
+        updateBarChart()
     }
     func findColorof( _ actName: String) -> Int{
         let storage = Storage()
@@ -146,4 +148,29 @@ class ActivityCorrelatorController: UIViewController, UIPickerViewDelegate, UIPi
         return "N/A"
     }
     
+    func updateBarChart() {
+        let value1 = BarChartDataEntry(x: 1, y: withActAvg)
+        let value2 = BarChartDataEntry(x: 2, y: withoutActAvg)
+        var withColor: UIColor
+        var withoutColor: UIColor
+        if (withActAvg > withoutActAvg) {
+            withColor = UIColor.green
+            withoutColor = UIColor.red
+        } else {
+            withColor = UIColor.red
+            withoutColor = UIColor.green
+        }
+        
+        let set = BarChartDataSet(entries: [value1, value2], label: "Happiness WITH and WITHOUT activity")
+        set.drawIconsEnabled = false
+        set.colors = [withColor, withoutColor]
+        set.stackLabels = ["Happiness with", "Happiness without"]
+        let data = BarChartData(dataSet: set)
+        
+        chtBar.leftAxis.axisMinimum = 1
+        chtBar.leftAxis.axisMaximum = 5
+        
+        chtBar.fitBars = true
+        chtBar.data = data
+    }
 }
