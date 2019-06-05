@@ -18,40 +18,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-s4-xb4" userLabel="Buttons View">
-                                <rect key="frame" x="82" y="422.5" width="250" height="51"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-s4-xb4" userLabel="Buttons View">
+                                <rect key="frame" x="7" y="423" width="400" height="72"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ats-ax-VcE">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="51"/>
-                                        <state key="normal" title="D:"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ats-ax-VcE">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                        <state key="normal" image="verySad">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="onePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hET-yY-0x2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecM-JG-p5V">
-                                        <rect key="frame" x="55" y="0.0" width="30" height="51"/>
-                                        <state key="normal" title=":("/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecM-JG-p5V">
+                                        <rect key="frame" x="82" y="0.0" width="72" height="72"/>
+                                        <state key="normal" image="sad"/>
                                         <connections>
                                             <action selector="twoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Bh-jT-FRc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3d-y5-xoZ">
-                                        <rect key="frame" x="110" y="0.0" width="30" height="51"/>
-                                        <state key="normal" title=":|"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3d-y5-xoZ">
+                                        <rect key="frame" x="164" y="0.0" width="72" height="72"/>
+                                        <state key="normal" image="neutral"/>
                                         <connections>
                                             <action selector="threePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwD-qu-eNI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xm-RN-Exn">
-                                        <rect key="frame" x="165" y="0.0" width="30" height="51"/>
-                                        <state key="normal" title=":)"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xm-RN-Exn">
+                                        <rect key="frame" x="246" y="0.0" width="72" height="72"/>
+                                        <state key="normal" image="happy"/>
                                         <connections>
                                             <action selector="fourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ni9-Fr-R1q"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-hY-8ui">
-                                        <rect key="frame" x="220" y="0.0" width="30" height="51"/>
-                                        <state key="normal" title=":D"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-hY-8ui">
+                                        <rect key="frame" x="328" y="0.0" width="72" height="72"/>
+                                        <state key="normal" image="veryHappy"/>
                                         <connections>
                                             <action selector="fiveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m83-hw-pxU"/>
                                         </connections>
@@ -74,14 +76,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vkI-YV-5N3" firstAttribute="bottom" secondItem="5VT-s4-xb4" secondAttribute="bottom" constant="367" id="6Mn-2i-P4E"/>
                             <constraint firstItem="B5Z-50-EOj" firstAttribute="leading" secondItem="Bi9-Pl-Kug" secondAttribute="trailing" constant="58.5" id="AmR-jn-I9c"/>
                             <constraint firstItem="Bi9-Pl-Kug" firstAttribute="top" secondItem="vkI-YV-5N3" secondAttribute="top" constant="14" id="Bkw-pz-jNJ"/>
                             <constraint firstItem="Bi9-Pl-Kug" firstAttribute="leading" secondItem="vkI-YV-5N3" secondAttribute="leading" constant="20" id="Df5-nI-OR5"/>
                             <constraint firstItem="B5Z-50-EOj" firstAttribute="centerX" secondItem="vkI-YV-5N3" secondAttribute="centerX" id="ED1-8b-jWb"/>
-                            <constraint firstItem="5VT-s4-xb4" firstAttribute="top" secondItem="B5Z-50-EOj" secondAttribute="bottom" constant="338" id="MB6-DV-C7l"/>
                             <constraint firstItem="B5Z-50-EOj" firstAttribute="top" secondItem="vkI-YV-5N3" secondAttribute="top" constant="20" id="MlS-bi-Ig2"/>
-                            <constraint firstItem="5VT-s4-xb4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qcL-5I-T0e"/>
-                            <constraint firstItem="5VT-s4-xb4" firstAttribute="centerX" secondItem="vkI-YV-5N3" secondAttribute="centerX" id="wSi-uO-623"/>
+                            <constraint firstItem="5VT-s4-xb4" firstAttribute="centerX" secondItem="B5Z-50-EOj" secondAttribute="centerX" id="dG3-4B-OIW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vkI-YV-5N3"/>
                     </view>
@@ -365,8 +366,7 @@
                                 <rect key="frame" x="26" y="47" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="Vou-QB-NQU" eventType="touchUpInside" id="umn-up-9sI"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="6fh-wq-z6g"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="l2M-MT-S3t"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="AX7-cG-3ms">
@@ -594,9 +594,16 @@
             <point key="canvasLocation" x="1757.9710144927537" y="1092.8571428571429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="happy" width="72" height="72"/>
+        <image name="neutral" width="72" height="72"/>
+        <image name="sad" width="72" height="72"/>
+        <image name="veryHappy" width="72" height="72"/>
+        <image name="verySad" width="72" height="72"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Aea-vu-Xo1"/>
+        <segue reference="etp-xC-cub"/>
         <segue reference="CFp-gw-cbY"/>
-        <segue reference="6fh-wq-z6g"/>
+        <segue reference="l2M-MT-S3t"/>
     </inferredMetricsTieBreakers>
 </document>

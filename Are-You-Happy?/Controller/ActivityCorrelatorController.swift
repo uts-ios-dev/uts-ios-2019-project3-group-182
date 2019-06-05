@@ -167,7 +167,7 @@ class ActivityCorrelatorController: UIViewController, UIPickerViewDelegate, UIPi
         set.stackLabels = ["Happiness with", "Happiness without"]
         let data = BarChartData(dataSet: set)
         
-        chtBar.leftAxis.axisMinimum = 1
+        chtBar.leftAxis.axisMinimum = 0
         chtBar.leftAxis.axisMaximum = 5
         
         chtBar.fitBars = true
