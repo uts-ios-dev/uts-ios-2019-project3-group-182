@@ -271,14 +271,23 @@
                                     <segue destination="mY5-HJ-5b1" kind="embed" id="ftc-sK-yDa"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f7-ee-w0k">
+                                <rect key="frame" x="20" y="44" width="57" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="Vou-QB-NQU" kind="show" id="Aea-vu-Xo1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" identifier="statsID"/>
                         <constraints>
+                            <constraint firstItem="2f7-ee-w0k" firstAttribute="leading" secondItem="Lp6-7p-Lvx" secondAttribute="leading" id="Efb-WI-gTi"/>
                             <constraint firstAttribute="bottom" secondItem="APr-Qc-0d8" secondAttribute="bottom" constant="712" id="GJQ-mt-oK2"/>
                             <constraint firstItem="ySG-yw-TZS" firstAttribute="top" secondItem="3De-PN-362" secondAttribute="bottom" constant="8" symbolic="YES" id="MlG-6P-him"/>
                             <constraint firstItem="3De-PN-362" firstAttribute="top" secondItem="Oqm-oR-WAJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ROy-xT-jmA"/>
                             <constraint firstItem="APr-Qc-0d8" firstAttribute="leading" secondItem="Lp6-7p-Lvx" secondAttribute="leading" id="TgV-cO-JPz"/>
+                            <constraint firstItem="2f7-ee-w0k" firstAttribute="top" secondItem="Lp6-7p-Lvx" secondAttribute="top" id="Uyr-hU-csJ"/>
                             <constraint firstItem="APr-Qc-0d8" firstAttribute="top" secondItem="Lp6-7p-Lvx" secondAttribute="bottom" constant="8" symbolic="YES" id="Xfb-P1-Rys"/>
                             <constraint firstItem="ySG-yw-TZS" firstAttribute="bottom" secondItem="1h2-zO-j8M" secondAttribute="bottom" id="ZjE-Sk-k7k"/>
                             <constraint firstItem="ySG-yw-TZS" firstAttribute="trailing" secondItem="3De-PN-362" secondAttribute="trailing" id="dhr-me-kjX"/>
@@ -356,7 +365,8 @@
                                 <rect key="frame" x="26" y="47" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="8wV-zL-uvi"/>
+                                    <action selector="backButtonPressed:" destination="Vou-QB-NQU" eventType="touchUpInside" id="umn-up-9sI"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="6fh-wq-z6g"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="AX7-cG-3ms">
@@ -585,7 +595,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bbl-5o-EF4"/>
-        <segue reference="ljc-ru-XUD"/>
+        <segue reference="Aea-vu-Xo1"/>
+        <segue reference="CFp-gw-cbY"/>
+        <segue reference="6fh-wq-z6g"/>
     </inferredMetricsTieBreakers>
 </document>
