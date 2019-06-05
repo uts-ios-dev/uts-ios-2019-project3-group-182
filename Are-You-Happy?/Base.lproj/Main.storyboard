@@ -121,7 +121,7 @@
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgJ-Eo-5cV">
                                 <rect key="frame" x="146" y="474" width="123" height="55"/>
-                                <color key="backgroundColor" red="0.49429052690000003" green="0.64239524179999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.72339654059579528" green="0.72339654059579528" blue="0.72339654059579528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="rB8-dk-FI3"/>
                                 </constraints>
@@ -604,7 +604,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="etp-xC-cub"/>
-        <segue reference="CFp-gw-cbY"/>
+        <segue reference="Bbl-5o-EF4"/>
         <segue reference="ljc-ru-XUD"/>
     </inferredMetricsTieBreakers>
 </document>

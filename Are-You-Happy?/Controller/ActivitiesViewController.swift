@@ -89,7 +89,7 @@ class ActivitiesViewController: UIViewController {
     func changeColor(_ button: UIButton) {
         if(button.tintColor == defaultFalseColor) {
             button.tintColor = colors.uiColorOptions[activities[findButtonID(button)].color]
-            nextButton.backgroundColor = UIColor.green
+            nextButton.backgroundColor = UIColor(red: CGFloat(126 / 255.0), green: CGFloat(164 / 255.0), blue: CGFloat(252 / 255.0), alpha: 1.0)
             nextButton.isEnabled = true
         } else {
             button.tintColor = defaultFalseColor
