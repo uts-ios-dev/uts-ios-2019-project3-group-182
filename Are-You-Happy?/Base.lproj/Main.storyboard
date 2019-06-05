@@ -126,7 +126,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="RvV-nM-Vjo" eventType="touchUpInside" id="hoS-3N-uWc"/>
-                                    <segue destination="1ss-rb-z3H" kind="show" id="Mhl-WF-QFa"/>
+                                    <segue destination="2UZ-cM-ZNS" kind="show" id="phm-59-lzE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFt-pA-Ssj">
@@ -622,7 +622,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Mhl-WF-QFa"/>
         <segue reference="ljc-ru-XUD"/>
     </inferredMetricsTieBreakers>
 </document>
